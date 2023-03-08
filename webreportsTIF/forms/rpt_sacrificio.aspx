@@ -31,10 +31,10 @@
               </a>
             </li>
            </ul>
-
         </div>
       </div>
     </nav>
+    
 <%-------------------------------------------------------------------------------------%>
     <h1>SACRIFICIO</h1>
 
@@ -47,6 +47,8 @@
             <button type="button" class="btn btn-success">Actualizar</button>
             <button type="button" class="btn btn-warning">Imprimir</button>
       </form>
+<%-------------------------------------------------------------------------------------%>
+
 
  <%--Tabla--%>
      <div class="table-wrapper">
@@ -79,7 +81,7 @@
         </tbody>
       </table>
     </div>
-
+<%-------------------------------------------------------------------------------------%>
 
        <!--Bostrap JS-->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
@@ -92,5 +94,7 @@
         <div>
         </div>
     </form>
+
+
 </body>
 </html>
