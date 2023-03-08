@@ -115,6 +115,7 @@
     <Content Include="Default.aspx" />
     <Content Include="estilos\bootstrap.css" />
     <Content Include="estilos\bootstrap.min.css" />
+    <Content Include="estilos\dsgridview.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="forms\rpt_sacrificio.aspx" />
