@@ -116,9 +116,11 @@
     <Content Include="estilos\bootstrap.css" />
     <Content Include="estilos\bootstrap.min.css" />
     <Content Include="estilos\dsgridview.css" />
+    <Content Include="estilos\velocidadstyle.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="forms\rpt_sacrificio.aspx" />
+    <Content Include="forms\rpt_velocidad.aspx" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -193,6 +195,13 @@
     </Compile>
     <Compile Include="forms\rpt_sacrificio.aspx.designer.cs">
       <DependentUpon>rpt_sacrificio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="forms\rpt_velocidad.aspx.cs">
+      <DependentUpon>rpt_velocidad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="forms\rpt_velocidad.aspx.designer.cs">
+      <DependentUpon>rpt_velocidad.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
