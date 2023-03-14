@@ -119,6 +119,7 @@
     <Content Include="estilos\velocidadstyle.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="forms\rpt_mermas.aspx" />
     <Content Include="forms\rpt_sacrificio.aspx" />
     <Content Include="forms\rpt_velocidad.aspx" />
     <Content Include="Global.asax" />
@@ -188,6 +189,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="forms\rpt_mermas.aspx.cs">
+      <DependentUpon>rpt_mermas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="forms\rpt_mermas.aspx.designer.cs">
+      <DependentUpon>rpt_mermas.aspx</DependentUpon>
     </Compile>
     <Compile Include="forms\rpt_sacrificio.aspx.cs">
       <DependentUpon>rpt_sacrificio.aspx</DependentUpon>

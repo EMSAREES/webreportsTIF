@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="rpt_velocidad.aspx.cs" Inherits="webreportsTIF.forms.rpt_velocidad" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="rpt_mermas.aspx.cs" Inherits="webreportsTIF.forms.rpt_mermas" %>
 
 <!DOCTYPE html>
 
@@ -12,13 +12,12 @@
     <link href="../estilos/velocidadstyle.css" rel="stylesheet" />
 </head>
 <body>
-<%--------------------- Barra superior que indica la busqueda del reporte --------------------------------------------------%>
     <nav class="navbar navbar-expand-lg navbar-dark bg-black">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">VELOCIDAD DE LÍNEA DE PRODUCCIÓN</a>
+            <a class="navbar-brand" href="#">PLANTA TIF</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-          </button>
+              </button>
           <div class="collapse navbar-collapse" id="navbarColor01">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item" style="margin-left: 20px;">
@@ -32,12 +31,10 @@
       </nav>
 <%--------------------------------------------------------------------------------------------------------------------------%>
 <%-----------------------Form principal donde se ingresan los datos para la busqueda----------------------------------------%>
-      <form class="form">
+
+     <form class="form">
+         <h1> MERMAS</h1>
           <div class="contenedor-inputs">
-              <div class="contenedor-interno">
-                <label for="Introductor" class="labels">Introductor</label>
-                <input type="text" id="Introductor" name="IntroductorId" class="input-15" required="required"/>
-                <input type="text" name="IntroductorNom" class="input-right" required="required"/>
                 <label for="fechaInicio" class="labels">Fecha Inicial</label>
                 <input type="date" id="fechaInicio" name="FechaInicio" class="input-right" required="required"/>
                 <label for="fechaFinal" class="labels">Fecha Final</label>
@@ -48,18 +45,22 @@
               </div>
           </div>
       </form>
+
 <%--------------------------------------------------------------------------------------------------------------------------%>
 <%-----------------------Tabla de representacion de los datos que seran el resultado de la busqueda-------------------------%>
-      <div class="table-wrapper">
+
+          <div class="table-wrapper">
           <table class="table table-border table-hover" cellspacing="0" width="100%">
               <thead>
-                <tr class="table-active">
-                  <th scope="col">FOLIO</th>
+                <th scope="col>FOLIO</th>
+                  <th scope="col">LOTE ORIGINAL</th>
+                  <th scope="col">FECHA DE SALIDA</th>
+                  <th scope="col">DIAS CUARTO</th>
                   <th scope="col">MARCA</th>
-                  <th scope="col">INTRODUCTOR</th>
-                  <th scope="col">FECHA</th>
-                  <th scope="col">HORA</th>
-                  <th scope="col">LOTE</th>
+                  <th scope="colh>PIEZAS FR</th>
+                  <th scope="col">PESO CAL</th>
+                  <th scope="col">PESO FRIO</th>
+                  <th scope="col">% MERMA</th>
                 </tr>
               </thead>
               <tbody>
@@ -69,7 +70,7 @@
           </table>
       </div>
 <%--------------------------------------------------------------------------------------------------------------------------%>
-    <form id="form1" runat="server">
+<form id="form1" runat="server">
         <div>
         </div>
     </form>
