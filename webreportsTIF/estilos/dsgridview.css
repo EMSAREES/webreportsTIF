@@ -17,3 +17,30 @@
         background-color: #888;
         border-radius: 5px;
     }
+
+.contenedor-boton {
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@media screen and (max-width: 768px) {
+    .form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contenedor-boton {
+        margin-top: 20px;
+    }
+}
+
+.espa {
+    margin: 10px
+}
+
+.divir1 {
+    text-align: center;
+}

@@ -49,16 +49,18 @@
      <form class="form">
           <h1>SACRIFICIO</h1>
           <div  class="contenedor-inputs"> 
-              
+              <div class="divir1">
                     <label for="fechaInicio" class="labels">Fecha Inicial</label>
                     <input type="date" id="fechaInicio" name="FechaInicio" class="input-right" required="required"/>
                     <label for="fechaFinal" class="labels">Fecha Final</label>
                     <input type="date" id="fechaFinal" name="FechaFinal" class="input-final" required="required"/>
-                 <div class="contenedor-boton">
-                    <button type="button" class="btn btn-info">Buscar</button>
-                    <button type="button" class="btn btn-success">Actualizar</button>
-                    <button type="button" class="btn btn-warning">Imprimir</button>
-                </div>
+               </div>
+
+               <div class="contenedor-boton">
+                    <button type="button" class="btn btn-info espa">Buscar</button>
+                    <button type="button" class="btn btn-success espa">Actualizar</button>
+                    <button type="button" class="btn btn-warning espa">Imprimir</button>
+               </div>
           </div>
       </form>
 
