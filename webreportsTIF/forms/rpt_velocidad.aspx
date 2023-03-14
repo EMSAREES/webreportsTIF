@@ -15,7 +15,7 @@
 <%--------------------- Barra superior que indica la busqueda del reporte --------------------------------------------------%>
     <nav class="navbar navbar-expand-lg navbar-dark bg-black">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">VELOCIDAD DE LÍNEA DE PRODUCCIÓN</a>
+          <a class="navbar-brand" href="#">PLANTA TIF</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -33,18 +33,23 @@
 <%--------------------------------------------------------------------------------------------------------------------------%>
 <%-----------------------Form principal donde se ingresan los datos para la busqueda----------------------------------------%>
       <form class="form">
+          <h2>Velocidad de línea de prodicción</h2>
           <div class="contenedor-inputs">
-              <div class="contenedor-interno">
-                <label for="Introductor" class="labels">Introductor</label>
-                <input type="text" id="Introductor" name="IntroductorId" class="input-15" required="required"/>
-                <input type="text" name="IntroductorNom" class="input-right" required="required"/>
-                <label for="fechaInicio" class="labels">Fecha Inicial</label>
-                <input type="date" id="fechaInicio" name="FechaInicio" class="input-right" required="required"/>
-                <label for="fechaFinal" class="labels">Fecha Final</label>
-                <input type="date" id="fechaFinal" name="FechaFinal" class="input-final" required="required"/>
-                <button type="button" class="btn btn-info">Buscar</button>
-                <button type="button" class="btn btn-success">Actualizar</button>
-                <button type="button" class="btn btn-warning">Imprimir</button>
+              <div class="contenedores">
+                  <label for="Introductor" class="labels">Introductor</label>
+                  <input type="text" id="Introductor" name="IntroductorId" class="input-15" required="required"/>
+                  <input type="text" name="IntroductorNom" class="input-right" required="required"/>
+              </div>
+              <div class="contenedores">
+                  <label for="fechaInicio" class="labels">Fecha Inicial</label>
+                  <input type="date" id="fechaInicio" name="FechaInicio" class="input-right" required="required"/>
+                  <label for="fechaFinal" class="labels">Fecha Final</label>
+                  <input type="date" id="fechaFinal" name="FechaFinal" class="input-final" required="required"/>
+              </div>
+              <div class="contenedores">
+                  <button type="button" class="btn btn-success">Actualizar</button>
+                  <button type="button" class="btn btn-info">Buscar</button>
+                  <button type="button" class="btn btn-warning">Imprimir</button>
               </div>
           </div>
       </form>
