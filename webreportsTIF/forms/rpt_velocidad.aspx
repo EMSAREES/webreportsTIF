@@ -42,8 +42,8 @@
                 <input type="date" id="fechaInicio" name="FechaInicio" class="input-right" required="required"/>
                 <label for="fechaFinal" class="labels">Fecha Final</label>
                 <input type="date" id="fechaFinal" name="FechaFinal" class="input-final" required="required"/>
-                <button type="button" class="btn btn-success">Actualizar</button>
                 <button type="button" class="btn btn-info">Buscar</button>
+                <button type="button" class="btn btn-success">Actualizar</button>
                 <button type="button" class="btn btn-warning">Imprimir</button>
               </div>
           </div>
