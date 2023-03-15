@@ -116,6 +116,7 @@
     <Content Include="estilos\bootstrap.css" />
     <Content Include="estilos\bootstrap.min.css" />
     <Content Include="estilos\dsgridview.css" />
+    <Content Include="estilos\stylosacrificio.css" />
     <Content Include="estilos\velocidadstyle.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
