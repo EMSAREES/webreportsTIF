@@ -1,0 +1,86 @@
+﻿* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #FFF;
+}
+
+form, h2 {
+    margin: 10px;
+}
+
+.form {
+    width: 100%;
+    margin: auto;
+    background: white;
+    border-radius: 7px;
+}
+
+/*Ajuste del tamaño de letra de los label*/
+.labels {
+    font-size: 20px;
+}
+
+.contenedor-inputs {
+    padding: 10px 30px;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 7px;
+    border-top: 3px solid darkred;
+    border-bottom: 3px solid darkred;
+    border-left: 3px solid darkred;
+    border-right: 3px solid darkred;
+}
+
+.contenedores {
+    margin: 3px;
+}
+
+.contenedor-inputs, label {
+    padding: 4px;
+}
+
+.contenedor-inputs, .input-right {
+    margin-right: 3px;
+}
+
+.contenedor-inputs, div {
+    margin: 0;
+    padding: 5px;
+}
+
+input {
+    padding-bottom: 0.2em;
+    font-size: 20px;
+    border-radius: 3px;
+    border: 1px solid darkgray;
+}
+
+.input-15 {
+    width: 3rem;
+}
+
+.input-final {
+    margin-right: 1em;
+}
+
+.table-wrapper {
+    border-radius: 9px;
+    background: #fff;
+    overflow-x: auto;
+}
+
+
+.table-wrapper::-webkit-scrollbar {
+        height: 10px;
+}
+
+.table-wrapper::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+.table-wrapper::-webkit-scrollbar-thumb {
+    background-color: darkred;
+    border-radius: 5px;
+}

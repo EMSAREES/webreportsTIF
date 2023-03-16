@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="rpt_mermas.aspx.cs" Inherits="webreportsTIF.forms.rpt_mermas" %>
+﻿%@ Page Language="C#" AutoEventWireup="true" CodeBehind="rpt_mermas.aspx.cs" Inherits="webreportsTIF.forms.rpt_mermas" %>
 
 <!DOCTYPE html>
 
@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"/>
     <link href="../estilos/bootstrap.css" rel="stylesheet" />
     <link href="../estilos/bootstrap.min.css" rel="stylesheet" />
-    <link href="../estilos/velocidadstyle.css" rel="stylesheet" />
+    <link href="../estilos/Stylemermas.css" rel="stylesheet" />
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-black">
@@ -32,20 +32,27 @@
 <%--------------------------------------------------------------------------------------------------------------------------%>
 <%-----------------------Form principal donde se ingresan los datos para la busqueda----------------------------------------%>
 
-     <form class="form">
-         <h1> MERMAS</h1>
+      <form class="form">
+          <h2>CONTROL DE MERMAS</h2>
           <div class="contenedor-inputs">
-                <label for="fechaInicio" class="labels">Fecha Inicial</label>
-                <input type="date" id="fechaInicio" name="FechaInicio" class="input-right" required="required"/>
-                <label for="fechaFinal" class="labels">Fecha Final</label>
-                <input type="date" id="fechaFinal" name="FechaFinal" class="input-final" required="required"/>
-                <button type="button" class="btn btn-success">Actualizar</button>
-                <button type="button" class="btn btn-info">Buscar</button>
-                <button type="button" class="btn btn-warning">Imprimir</button>
+              <div class="contenedores">
+                  <label for="Introductor" class="labels">Introductor</label>
+                  <input type="text" id="Introductor" name="IntroductorId" class="input-15" required="required"/>
+                  <input type="text" name="IntroductorNom" class="input-right" required="required"/>
+              </div>
+              <div class="contenedores">
+                  <label for="fechaInicio" class="labels">Fecha Inicial</label>
+                  <input type="date" id="fechaInicio" name="FechaInicio" class="input-right" required="required"/>
+                  <label for="fechaFinal" class="labels">Fecha Final</label>
+                  <input type="date" id="fechaFinal" name="FechaFinal" class="input-final" required="required"/>
+              </div>
+              <div class="contenedores">
+                  <button type="button" class="btn btn-success">Actualizar</button>
+                  <button type="button" class="btn btn-info">Buscar</button>
+                  <button type="button" class="btn btn-warning">Imprimir</button>
               </div>
           </div>
       </form>
-
 <%--------------------------------------------------------------------------------------------------------------------------%>
 <%-----------------------Tabla de representacion de los datos que seran el resultado de la busqueda-------------------------%>
 
@@ -57,7 +64,7 @@
                   <th scope="col">FECHA DE SALIDA</th>
                   <th scope="col">DIAS CUARTO</th>
                   <th scope="col">MARCA</th>
-                  <th scope="colh>PIEZAS FR</th>
+                  <th scope="col">PIEZAS FR</th>
                   <th scope="col">PESO CAL</th>
                   <th scope="col">PESO FRIO</th>
                   <th scope="col">% MERMA</th>
