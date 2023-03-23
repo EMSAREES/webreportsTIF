@@ -117,10 +117,16 @@
     <Content Include="estilos\bootstrap.min.css" />
     <Content Include="estilos\CanalesEstilos.css" />
     <Content Include="estilos\dsgridview.css" />
+    <Content Include="estilos\Stylemermas.css" />
+    <Content Include="estilos\stylosacrificio.css" />
     <Content Include="estilos\velocidadstyle.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+<<<<<<< HEAD
     <Content Include="forms\rpt_canalesInventario.aspx" />
+=======
+    <Content Include="forms\rpt_mermas.aspx" />
+>>>>>>> 32bd080f05f8b411e5e8645da8c86e52c7b347b1
     <Content Include="forms\rpt_sacrificio.aspx" />
     <Content Include="forms\rpt_velocidad.aspx" />
     <Content Include="Global.asax" />
@@ -191,12 +197,21 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="forms\rpt_canalesInventario.aspx.cs">
       <DependentUpon>rpt_canalesInventario.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="forms\rpt_canalesInventario.aspx.designer.cs">
       <DependentUpon>rpt_canalesInventario.aspx</DependentUpon>
+=======
+    <Compile Include="forms\rpt_mermas.aspx.cs">
+      <DependentUpon>rpt_mermas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="forms\rpt_mermas.aspx.designer.cs">
+      <DependentUpon>rpt_mermas.aspx</DependentUpon>
+>>>>>>> 32bd080f05f8b411e5e8645da8c86e52c7b347b1
     </Compile>
     <Compile Include="forms\rpt_sacrificio.aspx.cs">
       <DependentUpon>rpt_sacrificio.aspx</DependentUpon>

@@ -1,0 +1,6 @@
+projectKey=webreport
+serverUrl=http://localhost:9000
+serverVersion=9.9.0.65466
+dashboardUrl=http://localhost:9000/dashboard?id=webreport
+ceTaskId=AYbhHk04buE6ibuc7I1o
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AYbhHk04buE6ibuc7I1o

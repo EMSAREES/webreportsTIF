@@ -10,7 +10,6 @@ form, h2 {
     margin: 10px;
 }
 
-/*Estructura del form y como este esta distribuido*/
 .form {
     width: 100%;
     margin: auto;
@@ -18,12 +17,11 @@ form, h2 {
     border-radius: 7px;
 }
 
-/*Ajuste del tamano de letra de los label*/
+/*Ajuste del tamaño de letra de los label*/
 .labels {
     font-size: 20px;
 }
 
-/*Div que contiene todas las etiquetas del form, es para organizarcion y que todas las etiquetas esten parejas*/
 .contenedor-inputs {
     padding: 10px 30px;
     display: flex;
@@ -35,18 +33,14 @@ form, h2 {
     border-right: 3px solid darkred;
 }
 
-/*Divs de los datos*/
 .contenedores {
     margin: 3px;
 }
 
-/*Para una pequena separacion de los labels de los inputs*/
 .contenedor-inputs, label {
     padding: 4px;
 }
 
-/*Se paracion entre los inputs y los labels hacia la derecha, para crear una separacion y que no esten 
-    muy pegados los unos con los otros*/
 .contenedor-inputs, .input-right {
     margin-right: 3px;
 }
@@ -63,12 +57,10 @@ input {
     border: 1px solid darkgray;
 }
 
-/*Disminuir el espacio que posee el input de IntroductorId*/
 .input-15 {
     width: 3rem;
 }
 
-/*Dar espacio entre los labels e inputs de los botones*/
 .input-final {
     margin-right: 1em;
 }
@@ -79,15 +71,16 @@ input {
     overflow-x: auto;
 }
 
+
 .table-wrapper::-webkit-scrollbar {
         height: 10px;
 }
 
 .table-wrapper::-webkit-scrollbar-track {
-        background-color: #f1f1f1;
+    background-color: #f1f1f1;
 }
 
 .table-wrapper::-webkit-scrollbar-thumb {
-        background-color: darkred;
-        border-radius: 5px;
+    background-color: darkred;
+    border-radius: 5px;
 }
