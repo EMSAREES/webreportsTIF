@@ -115,10 +115,12 @@
     <Content Include="Default.aspx" />
     <Content Include="estilos\bootstrap.css" />
     <Content Include="estilos\bootstrap.min.css" />
+    <Content Include="estilos\CanalesEstilos.css" />
     <Content Include="estilos\dsgridview.css" />
     <Content Include="estilos\velocidadstyle.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="forms\rpt_canalesInventario.aspx" />
     <Content Include="forms\rpt_sacrificio.aspx" />
     <Content Include="forms\rpt_velocidad.aspx" />
     <Content Include="Global.asax" />
@@ -188,6 +190,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="forms\rpt_canalesInventario.aspx.cs">
+      <DependentUpon>rpt_canalesInventario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="forms\rpt_canalesInventario.aspx.designer.cs">
+      <DependentUpon>rpt_canalesInventario.aspx</DependentUpon>
     </Compile>
     <Compile Include="forms\rpt_sacrificio.aspx.cs">
       <DependentUpon>rpt_sacrificio.aspx</DependentUpon>
