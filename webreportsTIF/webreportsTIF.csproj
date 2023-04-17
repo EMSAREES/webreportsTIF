@@ -117,11 +117,13 @@
     <Content Include="estilos\bootstrap.min.css" />
     <Content Include="estilos\CanalesEstilos.css" />
     <Content Include="estilos\dsgridview.css" />
+    <Content Include="estilos\Login.css" />
     <Content Include="estilos\Stylemermas.css" />
     <Content Include="estilos\stylosacrificio.css" />
     <Content Include="estilos\velocidadstyle.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="forms\Login.html" />
     <Content Include="forms\rpt_canalesInventario.aspx" />
     <Content Include="forms\rpt_mermas.aspx" />
     <Content Include="forms\rpt_sacrificio.aspx" />
@@ -200,14 +202,13 @@
     </Compile>
     <Compile Include="forms\rpt_canalesInventario.aspx.designer.cs">
       <DependentUpon>rpt_canalesInventario.aspx</DependentUpon>
-	</Compile>
+    </Compile>
     <Compile Include="forms\rpt_mermas.aspx.cs">
       <DependentUpon>rpt_mermas.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="forms\rpt_mermas.aspx.designer.cs">
       <DependentUpon>rpt_mermas.aspx</DependentUpon>
-
     </Compile>
     <Compile Include="forms\rpt_sacrificio.aspx.cs">
       <DependentUpon>rpt_sacrificio.aspx</DependentUpon>
