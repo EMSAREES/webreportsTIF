@@ -1,0 +1,105 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+* {
+    font-family: 'Ubuntu', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(/IMG/3976455-548141868.jpg);
+    background-color: #6c757d;
+    margin: 0;
+}
+
+.container {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    max-width: 100%;
+}
+
+h3 {
+    margin-top: 0;
+    text-align: center;
+    font-size: 24px;
+}
+
+.separator {
+    margin: 20px 0;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: #ccc;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.section-inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+    label span {
+        margin-bottom: 5px;
+    }
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button.submit-btn {
+    background-color: #bfc0c0;
+    color: #000;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    button.submit-btn:hover {
+        background-color: #ff5a5f;
+    }
+
+img {
+    height: auto;
+    max-width: 100%;
+    display: block;
+    margin: 20px auto;
+    padding: 1%;
+    border-radius: 18px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
+    border-radius: 5px;
+}
+
+@media only screen and (min-width: 768px) {
+    .container {
+        max-width: 600px;
+    }
+}

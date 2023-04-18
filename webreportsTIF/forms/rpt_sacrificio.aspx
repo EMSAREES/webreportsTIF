@@ -11,8 +11,9 @@
     <link href="../estilos/bootstrap.min.css" rel="stylesheet" />
     <link href="../estilos/dsgridview.css" rel="stylesheet" />
     <link href="../estilos/velocidadstyle.css" rel="stylesheet" />--%>
-
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"/>
+   
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+     <%--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"/>--%>
     <link href="../estilos/bootstrap.css" rel="stylesheet" />
     <link href="../estilos/bootstrap.min.css" rel="stylesheet" />
     <link href="../estilos/stylosacrificio.css" rel="stylesheet" />
@@ -46,71 +47,45 @@
 
  <%--   parte donde seleciona la fecha inicial y final y los botones buscar, guardar y actualizar.--%>
 
-     <form class="form">
+     <form class="form" runat="server">
           <h1>SACRIFICIO</h1>
           <div  class="contenedor-inputs"> 
               <div class="divir1">
                     <label for="fechaInicio" class="labels">Fecha Inicial</label>
-                    <input type="date" id="fechaInicio" name="FechaInicio" class="input-right" required="required"/>
+                    <input type="date" id="fechaInicio" name="FechaInicio" runat="server" class="input-right"/>
                     <label for="fechaFinal" class="labels">Fecha Final</label>
-                    <input type="date" id="fechaFinal" name="FechaFinal" class="input-final" required="required"/>
+                    <input type="date" id="fechaFinal" name="FechaFinal"  runat="server" class="input-final"/>
+                   <label for="Idproducto" class="labels">Lote</label>
+                    <input type="text" id="lote" name="Lote"  runat="server" class="input-final" style="width: 100px;"/>
                </div>
-
+             
                <div class="contenedor-boton">
-                    <button type="button" class="btn btn-info espa">Buscar</button>
-                    <button type="button" class="btn btn-success espa">Actualizar</button>
+                        <asp:Button ID="btbuscar" runat="server" Text="Buscar" class="btn btn-info espa"  OnClick="btbuscar_Click"/>
+                   <%--  <button type="button" class="btn btn-info espa">Buscar</button>--%>
                     <button type="button" class="btn btn-warning espa">Imprimir</button>
+               
                </div>
           </div>
+         <%--Tabla--%>
+            <asp:GridView ID="GVSacrificio" class="table table-bordered table-condensed table-responsive table-hover " runat="server" AutoGenerateColumns="true">
+             <Columns>
+              <%--  <asp:BoundField DataField="ID_MOV" HeaderText="ID_MOV" />
+                <asp:BoundField DataField="FECHA_INI" HeaderText="FECHA_INI" />
+                <asp:BoundField DataField="FECHA_FIN" HeaderText="FECHA_FIN" />
+                <asp:BoundField DataField="LOTE" HeaderText="LOTE" />
+                <asp:BoundField DataField="ID_PROD" HeaderText="ID_PROD" />--%>
+            </Columns>
+        </asp:GridView>
       </form>
 
-<%-------------------------------------------------------------------------------------%>
 
-
- <%--Tabla--%>
-    <div class="table-wrapper">
-    <table class="table table-border table-hover" cellspacing="0" width="100%">
-        <thead>
-          <tr class="table-active">
-            <th scope="col">CONS. DIA</th>
-            <th scope="col">LOTE</th>
-            <th scope="col">PRODUCTO</th>
-            <th scope="col">INTRODUCION</th>
-            <th scope="col">DESTINO</th>
-            <th scope="col">CONS. LOTE</th>
-            <th scope="col">PESO 1</th>
-            <th scope="col">PESO 2</th>
-            <th scope="col">DIF PESO</th>
-            <th scope="col">HORA</th>
-            <th scope="col">SERIE</th>
-            <th scope="col">ID</th>
-            <th scope="col">SEXO</th>
-            <th scope="col">MAYOR</th>
-            <th scope="col">VACIADA 1</th>
-            <th scope="col">VACIADA 2</th>
-            <th scope="col">VACIADA 3</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-       
-          </tr>
-        </tbody>
-      </table>
-    </div>
+   
 <%-------------------------------------------------------------------------------------%>
 
        <!--Bostrap JS-->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T  +ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 
-
-
-
-    <form id="form1" runat="server">
-        <div>
-        </div>
-    </form>
 
 
 </body>
