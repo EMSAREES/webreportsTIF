@@ -32,7 +32,7 @@
       </nav>
 <%--------------------------------------------------------------------------------------------------------------------------%>
 <%-----------------------Form principal donde se ingresan los datos para la busqueda----------------------------------------%>
-      <form class="form">
+      <form class="form" runat="server">
           <h2>Velocidad de línea de producción</h2>
           <div class="contenedor-inputs">
               <div class="contenedores">
@@ -47,11 +47,16 @@
                   <input type="date" id="fechaFinal" name="FechaFinal" class="input-final" required="required"/>
               </div>
               <div class="contenedores">
-                  <button type="button" class="btn btn-success">Actualizar</button>
+                  <asp:Button ID="btnbuscar" runat="server" Text="Buscar" class="btn btn-info espa" OnClick="btnbuscar_Click"/>
+                  <%--<button type="button" class="btn btn-success">Actualizar</button>
                   <button type="button" class="btn btn-info">Buscar</button>
-                  <button type="button" class="btn btn-warning">Imprimir</button>
+                  <button type="button" class="btn btn-warning">Imprimir</button>--%>
               </div>
           </div>
+          <asp:GridView ID="GVvelocidad" runat="server" AutoGenerateColumns="true">
+              <Columns>
+              </Columns>
+          </asp:GridView>
       </form>
 <%--------------------------------------------------------------------------------------------------------------------------%>
 <%-----------------------Tabla de representacion de los datos que seran el resultado de la busqueda-------------------------%>

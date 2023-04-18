@@ -18,32 +18,32 @@ namespace webreportsTIF.forms
 
         }
 
-        //public void LlenarGV()
-        //{
-        //    GridView1.DataSource = Listar();
-        //    GridView1.DataBind();
-        //}
+        protected void btnbuscar_Click(object sender, EventArgs e)
+        {
+            LlenarGV();
+        }
 
-        //public DataSet Listar()
-        //{
-        //    using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["SA"].ConnectionString))
-        //    {
-        //        conn.Open();
+        public void LlenarGV()
+        {
+            GVvelocidad.DataSource = Listar();
+            GVvelocidad.DataBind();
+        }
 
-        //        SqlDataAdapter adapter;
-        //        string fechaInicioStr;
-        //        string fechaFinalStr;
-        //        string sql = "SELECT * FROM ENTSAL_DET D INNER JOIN ENTSAL E ON E.ID_ESC = D.ID_eSC WHERE ID_MOV IN (1,2)";
-        //        DataSet ds = new DataSet();
-        //        adapter = new SqlDataAdapter(sql, conn);
-        //        adapter.Fill(ds, "tbl");
-        //        return ds;
-        //    }
-        //}
+        public DataSet Listar()
+        {
+            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["SA"].ConnectionString))
+            {
+                conn.Open();
 
-        //protected void btbuscar_Cick(object sender, EventArgs e)
-        //{
-        //    LlenarGV();
-        //}
+                SqlDataAdapter adapter;
+                //string fechaInicioStr;
+                //string fechaFinalStr;
+                string sql = "SELECT * FROM ENTSAL_DET D INNER JOIN ENTSAL E ON E.ID_ESC = D.ID_eSC WHERE ID_MOV IN (1,2) AND E.FECHA >= '2021-12-01 00:00' AND E.FECHA <= '2021-12-31 23:59'";
+                DataSet ds = new DataSet();
+                adapter = new SqlDataAdapter(sql, conn);
+                adapter.Fill(ds, "tbl");
+                return ds;
+            }
+        }
     }
 }
