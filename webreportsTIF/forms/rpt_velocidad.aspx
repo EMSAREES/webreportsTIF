@@ -33,8 +33,8 @@
       </nav>
 <%--------------------------------------------------------------------------------------------------------------------------%>
 <%-----------------------Form principal donde se ingresan los datos para la busqueda----------------------------------------%>
-      <form class="form">
-          <h2>Velocidad de línea de prodicción</h2>
+      <form class="form" runat="server">
+          <h2>Velocidad de línea de producción</h2>
           <div class="contenedor-inputs">
               <div class="contenedores">
                   <label for="Introductor" class="labels">Introductor</label>
@@ -48,36 +48,20 @@
                   <input type="date" id="fechaFinal" name="FechaFinal" class="input-final" required="required"/>
               </div>
               <div class="contenedores">
-                  <button type="button" class="btn btn-success">Actualizar</button>
+                  <asp:Button ID="btnbuscar" runat="server" Text="Buscar" class="btn btn-info espa" OnClick="btnbuscar_Click"/>
+                  <%--<button type="button" class="btn btn-success">Actualizar</button>
                   <button type="button" class="btn btn-info">Buscar</button>
-                  <button type="button" class="btn btn-warning">Imprimir</button>
+                  <button type="button" class="btn btn-warning">Imprimir</button>--%>
               </div>
+          </div>
+          <div style="overflow-x: auto;">
+          <asp:GridView ID="GVvelocidad"  class="table table-condensed table-hover" runat="server" AutoGenerateColumns="true">
+              <Columns>
+              </Columns>
+          </asp:GridView>
           </div>
       </form>
 <%--------------------------------------------------------------------------------------------------------------------------%>
 <%-----------------------Tabla de representacion de los datos que seran el resultado de la busqueda-------------------------%>
-      <div class="table-wrapper">
-          <table class="table table-border table-hover" cellspacing="0" width="100%">
-              <thead>
-                <tr class="table-active">
-                  <th scope="col">FOLIO</th>
-                  <th scope="col">MARCA</th>
-                  <th scope="col">INTRODUCTOR</th>
-                  <th scope="col">FECHA</th>
-                  <th scope="col">HORA</th>
-                  <th scope="col">LOTE</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                </tr>
-              </tbody>
-          </table>
-      </div>
-<%--------------------------------------------------------------------------------------------------------------------------%>
-    <form id="form1" runat="server">
-        <div>
-        </div>
-    </form>
 </body>
 </html>
