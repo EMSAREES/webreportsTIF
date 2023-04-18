@@ -33,7 +33,7 @@
 <%--------------------------------------------------------------------------------------------------------------------------%>
 <%-----------------------Form principal donde se ingresan los datos para la busqueda----------------------------------------%>
       <form class="form">
-          <h2>Velocidad de línea de prodicción</h2>
+          <h2>Velocidad de línea de producción</h2>
           <div class="contenedor-inputs">
               <div class="contenedores">
                   <label for="Introductor" class="labels">Introductor</label>
@@ -55,28 +55,5 @@
       </form>
 <%--------------------------------------------------------------------------------------------------------------------------%>
 <%-----------------------Tabla de representacion de los datos que seran el resultado de la busqueda-------------------------%>
-      <div class="table-wrapper">
-          <table class="table table-border table-hover" cellspacing="0" width="100%">
-              <thead>
-                <tr class="table-active">
-                  <th scope="col">FOLIO</th>
-                  <th scope="col">MARCA</th>
-                  <th scope="col">INTRODUCTOR</th>
-                  <th scope="col">FECHA</th>
-                  <th scope="col">HORA</th>
-                  <th scope="col">LOTE</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                </tr>
-              </tbody>
-          </table>
-      </div>
-<%--------------------------------------------------------------------------------------------------------------------------%>
-    <form id="form1" runat="server">
-        <div>
-        </div>
-    </form>
 </body>
 </html>
