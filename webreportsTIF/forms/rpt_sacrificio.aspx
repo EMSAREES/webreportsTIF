@@ -7,18 +7,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
     <%--referencia de los estilos--%>
-  <%--  <link href="../estilos/bootstrap.css" rel="stylesheet" />
-    <link href="../estilos/bootstrap.min.css" rel="stylesheet" />
-    <link href="../estilos/dsgridview.css" rel="stylesheet" />
-    <link href="../estilos/velocidadstyle.css" rel="stylesheet" />--%>
-   
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
-     <%--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"/>--%>
     <link href="../estilos/bootstrap.css" rel="stylesheet" />
     <link href="../estilos/bootstrap.min.css" rel="stylesheet" />
     <link href="../estilos/stylosacrificio.css" rel="stylesheet" />
-    <link href="../estilos/dsgridview.css" rel="stylesheet" />
-
+    <%--<link href="../estilos/dsgridview.css" rel="stylesheet" />--%>
+    
 </head>
 <body>
 
@@ -46,28 +39,28 @@
 
 
  <%--   parte donde seleciona la fecha inicial y final y los botones buscar, guardar y actualizar.--%>
-
      <form class="form" runat="server">
-          <h1>SACRIFICIO</h1>
+          <h2>SACRIFICIO</h2>
           <div  class="contenedor-inputs"> 
               <div class="divir1">
                     <label for="fechaInicio" class="labels">Fecha Inicial</label>
                     <input type="date" id="fechaInicio" name="FechaInicio" runat="server" class="input-right"/>
                     <label for="fechaFinal" class="labels">Fecha Final</label>
                     <input type="date" id="fechaFinal" name="FechaFinal"  runat="server" class="input-final"/>
-                   <label for="Idproducto" class="labels">Lote</label>
+                    <label for="Idproducto" class="labels">Lote</label>
                     <input type="text" id="lote" name="Lote"  runat="server" class="input-final" style="width: 100px;"/>
                </div>
              
                <div class="contenedor-boton">
-                        <asp:Button ID="btbuscar" runat="server" Text="Buscar" class="btn btn-info espa"  OnClick="btbuscar_Click"/>
+                    <asp:Button ID="btbuscar" runat="server" Text="Buscar" class="btn btn-info espa"  OnClick="btbuscar_Click"/>
                    <%--  <button type="button" class="btn btn-info espa">Buscar</button>--%>
                     <button type="button" class="btn btn-warning espa">Imprimir</button>
                
                </div>
           </div>
          <%--Tabla--%>
-            <asp:GridView ID="GVSacrificio" class="table table-bordered table-condensed table-responsive table-hover " runat="server" AutoGenerateColumns="true">
+         <div  style="overflow-x: auto;">
+            <asp:GridView ID="GVSacrificio" class="table table-condensed table-hover" runat="server" AutoGenerateColumns="true">
              <Columns>
               <%--  <asp:BoundField DataField="ID_MOV" HeaderText="ID_MOV" />
                 <asp:BoundField DataField="FECHA_INI" HeaderText="FECHA_INI" />
@@ -76,6 +69,7 @@
                 <asp:BoundField DataField="ID_PROD" HeaderText="ID_PROD" />--%>
             </Columns>
         </asp:GridView>
+         </div>
       </form>
 
 

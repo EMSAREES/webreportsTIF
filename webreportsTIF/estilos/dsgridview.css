@@ -1,4 +1,4 @@
-﻿body {
+﻿/*body {
 }
 
 .table-wrapper {
@@ -43,4 +43,31 @@
 
 .divir1 {
     text-align: center;
+}*/
+
+body {
+    width: 100%;
+    margin: 5px;
+}
+
+.table-condensed tr th {
+    border: 0px solid #6e7bd9;
+    color: white;
+    background-color: #6e7bd9;
+}
+
+.table-condensed, .table-condensed tr td {
+    border: 0px solid #000;
+}
+
+tr:nth-child(even) {
+    background: #f8f7ff
+}
+
+tr:nth-child(odd) {
+    background: #fff;
+}
+
+#GVSacrificio th:first-child {
+    color: black; /* Establece el color del texto en negro para la primera celda de la primera fila */
 }
