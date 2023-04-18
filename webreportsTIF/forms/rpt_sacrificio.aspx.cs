@@ -12,6 +12,10 @@ using System.Configuration;
 
 using System.Web.UI.HtmlControls;
 
+using CrystalDecisions.CrystalReports.Engine;
+using CrystalDecisions.Shared;
+
+
 namespace webreportsTIF.forms
 {
     public partial class rpt_sacrificio : System.Web.UI.Page
@@ -19,7 +23,7 @@ namespace webreportsTIF.forms
         protected void Page_Load(object sender, EventArgs e)
         {
             //LlenarGV();
-            
+
 
         }
 
@@ -32,8 +36,8 @@ namespace webreportsTIF.forms
             //}
         }
 
-    
-    
+
+
 
         public DataSet Listar()
         {
@@ -45,8 +49,8 @@ namespace webreportsTIF.forms
                 string fechaInicioStr = fechaInicio.Value;
                 string fechaFinalStr = fechaFinal.Value;
                 string loteStr = lote.Value;
-                string sql = "EXEC SP_CONS_ENTSAL_ENCDET_RENDIMIENTO_GANADO_EN_PIE 1, '" + fechaInicioStr + "', '" + fechaFinalStr + "', '"+ loteStr + "', '1'";
-                DataSet ds = new DataSet();   
+                string sql = "EXEC SP_CONS_ENTSAL_ENCDET_RENDIMIENTO_GANADO_EN_PIE 1, '" + fechaInicioStr + "', '" + fechaFinalStr + "', '" + loteStr + "', '1'";
+                DataSet ds = new DataSet();
                 adapter = new SqlDataAdapter(sql, conn);
                 adapter.Fill(ds, "tbl");
                 return ds;
@@ -57,5 +61,23 @@ namespace webreportsTIF.forms
         {
             LlenarGV();
         }
-    }
+
+        /*------------------------------------------------------------------------------------------------------------------*/
+       
+        public  void imprimir()
+        {
+
+            reportes.cr_rpt_sacrificio report = new reportes.cr_rpt_sacrificio();
+            report.SetDataSource(Listar());
+            report.VerifyDatabase();
+            CrystalReportViewer1.ReportSource = report;
+            CrystalReportViewer1.RefreshReport();
+
+        }
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            imprimir();
+        }
+
+    }    
 }
