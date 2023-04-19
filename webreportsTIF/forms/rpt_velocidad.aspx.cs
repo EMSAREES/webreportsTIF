@@ -38,7 +38,7 @@ namespace webreportsTIF.forms
                 SqlDataAdapter adapter;
                 //string fechaInicioStr;
                 //string fechaFinalStr;
-                string sql = "SELECT * FROM ENTSAL_DET D INNER JOIN ENTSAL E ON E.ID_ESC = D.ID_eSC WHERE ID_MOV IN (1,2) AND E.FECHA >= '2021-12-01 00:00' AND E.FECHA <= '2021-12-31 23:59'";
+                string sql = "SELECT * FROM ENTSAL_DET D INNER JOIN ENTSAL E ON E.ID_ESC = D.ID_eSC WHERE ID_MOV IN (1,2) AND E.FECHA >= '2021-12-01 00:00' AND E.FECHA <= '2021-12-01 23:59'";
                 DataSet ds = new DataSet();
                 adapter = new SqlDataAdapter(sql, conn);
                 adapter.Fill(ds, "tbl");

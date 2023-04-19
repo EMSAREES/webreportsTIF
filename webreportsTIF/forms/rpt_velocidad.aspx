@@ -53,6 +53,8 @@
                   <button type="button" class="btn btn-info">Buscar</button>
                   <button type="button" class="btn btn-warning">Imprimir</button>--%>
               </div>
+<%--------------------------------------------------------------------------------------------------------------------------%>
+<%----------------------------------------- GridView donde se cargan los datos ---------------------------------------------%>
           </div>
           <div style="overflow-x: auto;">
           <asp:GridView ID="GVvelocidad"  class="table table-condensed table-hover" runat="server" AutoGenerateColumns="true">
@@ -60,8 +62,7 @@
               </Columns>
           </asp:GridView>
           </div>
-      </form>
 <%--------------------------------------------------------------------------------------------------------------------------%>
-<%-----------------------Tabla de representacion de los datos que seran el resultado de la busqueda-------------------------%>
+      </form>
 </body>
 </html>
