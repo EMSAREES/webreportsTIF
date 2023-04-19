@@ -1,5 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="rpt_sacrificio.aspx.cs" Inherits="webreportsTIF.forms.rpt_sacrificio" %>
 
+<%@ Register Assembly="CrystalDecisions.Web, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" Namespace="CrystalDecisions.Web" TagPrefix="CR" %>
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -54,9 +56,12 @@
                <div class="contenedor-boton">
                     <asp:Button ID="btbuscar" runat="server" Text="Buscar" class="btn btn-info espa"  OnClick="btbuscar_Click"/>
                    <%--  <button type="button" class="btn btn-info espa">Buscar</button>--%>
-                    <button type="button" class="btn btn-warning espa">Imprimir</button>
+                    <%--<button type="button" class="btn btn-warning espa">Imprimir</button>--%>
                
+                    <asp:Button ID="Button1" runat="server" Text="Imprimir" type="button" class="btn btn-warning espa" OnClick="Button1_Click"/>
+                    
                </div>
+              
           </div>
          <%--Tabla--%>
          <div  style="overflow-x: auto;">
@@ -69,6 +74,7 @@
                 <asp:BoundField DataField="ID_PROD" HeaderText="ID_PROD" />--%>
             </Columns>
         </asp:GridView>
+             <CR:CrystalReportViewer ID="CrystalReportViewer1" runat="server" AutoDataBind="true" />
          </div>
       </form>
 
