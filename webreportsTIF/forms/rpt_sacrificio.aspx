@@ -1,6 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="rpt_sacrificio.aspx.cs" Inherits="webreportsTIF.forms.rpt_sacrificio" %>
 
-<%@ Register Assembly="CrystalDecisions.Web, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" Namespace="CrystalDecisions.Web" TagPrefix="CR" %>
+<!--<%@ Register Assembly="CrystalDecisions.Web, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" Namespace="CrystalDecisions.Web" TagPrefix="CR" %>-->
 
 <!DOCTYPE html>
 
@@ -64,17 +64,38 @@
               
           </div>
          <%--Tabla--%>
+         <%--Visible="false" Para que no se muestre un dato en el Grid--%>
          <div  style="overflow-x: auto;">
-            <asp:GridView ID="GVSacrificio" class="table table-condensed table-hover" runat="server" AutoGenerateColumns="true">
+            <asp:GridView ID="GVSacrificio" class="table table-condensed table-hover" AutoGenerateColumns="false" runat="server" >
              <Columns>
-              <%--  <asp:BoundField DataField="ID_MOV" HeaderText="ID_MOV" />
-                <asp:BoundField DataField="FECHA_INI" HeaderText="FECHA_INI" />
-                <asp:BoundField DataField="FECHA_FIN" HeaderText="FECHA_FIN" />
+                <asp:BoundField DataField="MARCA_CTE_INTR" HeaderText="MARCA_CTE_INTR" />
+                <asp:BoundField DataField="FECHA" HeaderText="FECHA" />
+                <asp:BoundField DataField="HORA" HeaderText="HORA" />
                 <asp:BoundField DataField="LOTE" HeaderText="LOTE" />
-                <asp:BoundField DataField="ID_PROD" HeaderText="ID_PROD" />--%>
+                <asp:BoundField DataField="NOM_PROD" HeaderText="NOM_PROD" />
+                <asp:BoundField DataField="PIEZAS" HeaderText="PIEZAS" />
+                <asp:BoundField DataField="PESO" HeaderText="TARA"/>
+                <asp:BoundField DataField="TARA" HeaderText="TARA"/>
+                <asp:BoundField DataField="ID_ESC" HeaderText="ID_ESC" Visible="false"/>
+                <asp:BoundField DataField="ID_MOV" HeaderText="ID_MOV" Visible="false"/>
+                <asp:BoundField DataField="ID_ALM" HeaderText="ID_ALM" Visible="false"/>
+                <asp:BoundField DataField="FOLIO" HeaderText="FOLIO" Visible="false"/>
+                <asp:BoundField DataField="ID_CTE_PROD" HeaderText="ID_CTE_PROD" Visible="false"/>
+                <asp:BoundField DataField="ID_CTE_INTR" HeaderText="ID_CTE_INTR" Visible="false"/>
+                <asp:BoundField DataField="MARCA_CTE_INTR" HeaderText="MARCA_CTE_INTR" Visible="false"/>
+                <asp:BoundField DataField="ID_CTE_DEST" HeaderText="ID_CTE_DEST" Visible="false"/>
+                <asp:BoundField DataField="MARCA_CTE_DEST" HeaderText="MARCA_CTE_DEST" Visible="false"/>
+                <asp:BoundField DataField="OBSERVACIONES" HeaderText="OBSERVACIONES" Visible="false"/>
+                <asp:BoundField DataField="ID_ESD" HeaderText="ID_ESD" Visible="false"/>
+                <asp:BoundField DataField="ID_PROD" HeaderText="ID_PROD" Visible="false"/>
+                <asp:BoundField DataField="FECHA_ESD" HeaderText="FECHA_ESD" Visible="false"/>
+                <asp:BoundField DataField="HORA_ESD" HeaderText="HORA_ESD" Visible="false"/>
+                <asp:BoundField DataField="SERIE" HeaderText="SERIE" Visible="false"/>
+                <asp:BoundField DataField="ID" HeaderText="ID" Visible="false"/>
+            
             </Columns>
         </asp:GridView>
-             <CR:CrystalReportViewer ID="CrystalReportViewer1" runat="server" AutoDataBind="true" />
+            
          </div>
       </form>
 

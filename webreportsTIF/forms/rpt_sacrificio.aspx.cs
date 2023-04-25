@@ -20,6 +20,11 @@ namespace webreportsTIF.forms
 {
     public partial class rpt_sacrificio : System.Web.UI.Page
     {
+
+        string fechaInicioStr;
+        string fechaFinalStr;
+        string loteStr;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             //LlenarGV();
@@ -46,9 +51,9 @@ namespace webreportsTIF.forms
                 conn.Open();
 
                 SqlDataAdapter adapter;
-                string fechaInicioStr = fechaInicio.Value;
-                string fechaFinalStr = fechaFinal.Value;
-                string loteStr = lote.Value;
+                fechaInicioStr = fechaInicio.Value;
+                fechaFinalStr = fechaFinal.Value;
+                loteStr = lote.Value;
                 string sql = "EXEC SP_CONS_ENTSAL_ENCDET_RENDIMIENTO_GANADO_EN_PIE 1, '" + fechaInicioStr + "', '" + fechaFinalStr + "', '" + loteStr + "', '1'";
                 DataSet ds = new DataSet();
                 adapter = new SqlDataAdapter(sql, conn);
@@ -63,20 +68,25 @@ namespace webreportsTIF.forms
         }
 
         /*------------------------------------------------------------------------------------------------------------------*/
-       
-        public  void imprimir()
-        {
 
+       /* public void imprimir()
+        {
+        https://localhost:44361/forms/rpt_sacrificio.aspx.cs
             reportes.cr_rpt_sacrificio report = new reportes.cr_rpt_sacrificio();
-            report.SetDataSource(Listar());
-            report.VerifyDatabase();
+            DataSet ds = Listar();
+            //report.SetDataSource(Listar());
+            report.SetDataSource(ds);
+            //report.VerifyDatabase();
             CrystalReportViewer1.ReportSource = report;
             CrystalReportViewer1.RefreshReport();
+        }*/
 
-        }
         protected void Button1_Click(object sender, EventArgs e)
         {
-            imprimir();
+            Session["FechaISac"] = fechaInicioStr;
+            Session["FechaFSac"] = fechaFinalStr;
+            Session["LoteSac"] = loteStr;
+            Response.Redirect("~/reportes/form_rpt_sacrificio.aspx");
         }
 
     }    
