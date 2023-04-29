@@ -55,10 +55,14 @@ namespace webreportsTIF.forms
                 fechaFinalStr = fechaFinal.Value;
                 loteStr = lote.Value;
                 string sql = "EXEC SP_CONS_ENTSAL_ENCDET_RENDIMIENTO_GANADO_EN_PIE 1, '" + fechaInicioStr + "', '" + fechaFinalStr + "', '" + loteStr + "', '1'";
+                Session["FechaISac"] = fechaInicioStr;
+                Session["FechaFSac"] = fechaFinalStr;
+                Session["LoteSac"] = loteStr;
                 DataSet ds = new DataSet();
                 adapter = new SqlDataAdapter(sql, conn);
                 adapter.Fill(ds, "tbl");
                 return ds;
+             
             }
         }
 
@@ -83,9 +87,7 @@ namespace webreportsTIF.forms
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            Session["FechaISac"] = fechaInicioStr;
-            Session["FechaFSac"] = fechaFinalStr;
-            Session["LoteSac"] = loteStr;
+         
             Response.Redirect("~/reportes/form_rpt_sacrificio.aspx");
         }
 
