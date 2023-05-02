@@ -43,8 +43,8 @@ namespace webreportsTIF.reportes
 
             //CrystalReportViewer1.ReportSource = report;
             //report.ParameterFields.Add("@ID_MOV", SqlDbType.Int);
-            //CrystalReportViewer1.RefreshReport();
-            
+            CrystalReportViewer1.RefreshReport();
+
         }
 
         public DataSet Listar()

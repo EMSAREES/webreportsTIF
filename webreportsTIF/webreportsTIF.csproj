@@ -138,7 +138,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="forms\Login.html" />
     <Content Include="forms\rpt_canalesInventario.aspx" />
-    <Content Include="forms\rpt_login.aspx" />
     <Content Include="forms\rpt_mermas.aspx" />
     <Content Include="forms\rpt_sacrificio.aspx" />
     <Content Include="forms\rpt_velocidad.aspx" />
@@ -230,13 +229,6 @@
     </Compile>
     <Compile Include="forms\rpt_canalesInventario.aspx.designer.cs">
       <DependentUpon>rpt_canalesInventario.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="forms\rpt_login.aspx.cs">
-      <DependentUpon>rpt_login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="forms\rpt_login.aspx.designer.cs">
-      <DependentUpon>rpt_login.aspx</DependentUpon>
     </Compile>
     <Compile Include="forms\rpt_mermas.aspx.cs">
       <DependentUpon>rpt_mermas.aspx</DependentUpon>
