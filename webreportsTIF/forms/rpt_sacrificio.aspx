@@ -76,8 +76,7 @@
                 <asp:BoundField DataField="PIEZAS" HeaderText="PIEZAS" />
                 <asp:BoundField DataField="PESO" HeaderText="TARA"/>
                 <asp:BoundField DataField="TARA" HeaderText="TARA"/>
-
-                <%--<asp:BoundField DataField="ID_ESC" HeaderText="ID_ESC" Visible="false"/>
+                <asp:BoundField DataField="ID_ESC" HeaderText="ID_ESC" Visible="false"/>
                 <asp:BoundField DataField="ID_MOV" HeaderText="ID_MOV" Visible="false"/>
                 <asp:BoundField DataField="ID_ALM" HeaderText="ID_ALM" Visible="false"/>
                 <asp:BoundField DataField="FOLIO" HeaderText="FOLIO" Visible="false"/>
@@ -92,7 +91,7 @@
                 <asp:BoundField DataField="FECHA_ESD" HeaderText="FECHA_ESD" Visible="false"/>
                 <asp:BoundField DataField="HORA_ESD" HeaderText="HORA_ESD" Visible="false"/>
                 <asp:BoundField DataField="SERIE" HeaderText="SERIE" Visible="false"/>
-                <asp:BoundField DataField="ID" HeaderText="ID" Visible="false"/>--%>
+                <asp:BoundField DataField="ID" HeaderText="ID" Visible="false"/>
             
             </Columns>
         </asp:GridView>
