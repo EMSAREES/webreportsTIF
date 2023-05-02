@@ -28,7 +28,7 @@ namespace webreportsTIF.reportes
 
 
             //// Crear una instancia
-           // forms.rpt_sacrificio rpts = new forms.rpt_sacrificio();
+           //forms.rpt_sacrificio rpts = new forms.rpt_sacrificio();
 
             //// rpts.Listar();
             reportes.CrystalReport1 report = new reportes.CrystalReport1();
@@ -41,7 +41,7 @@ namespace webreportsTIF.reportes
             //reportParameters[0] = new ReportParameter("@ID_MOV", 1);
             //CrystalReport1.SetParameters(reportParameters);
 
-            //CrystalReportViewer1.ReportSource = report;
+            CrystalReportViewer1.ReportSource = report;
             //report.ParameterFields.Add("@ID_MOV", SqlDbType.Int);
             CrystalReportViewer1.RefreshReport();
 
