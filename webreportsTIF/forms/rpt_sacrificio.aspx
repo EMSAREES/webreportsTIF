@@ -74,7 +74,7 @@
                 <asp:BoundField DataField="LOTE" HeaderText="LOTE" />
                 <asp:BoundField DataField="NOM_PROD" HeaderText="NOM_PROD" />
                 <asp:BoundField DataField="PIEZAS" HeaderText="PIEZAS" />
-                <asp:BoundField DataField="PESO" HeaderText="TARA"/>
+                <asp:BoundField DataField="PESO" HeaderText="PESO"/>
                 <asp:BoundField DataField="TARA" HeaderText="TARA"/>
 
                 <%--<asp:BoundField DataField="ID_ESC" HeaderText="ID_ESC" Visible="false"/>
