@@ -74,15 +74,15 @@ input {
     overflow-x: auto;
 }
 
-.table-wrapper::-webkit-scrollbar {
+    .table-wrapper::-webkit-scrollbar {
         height: 10px;
-}
+    }
 
-.table-wrapper::-webkit-scrollbar-track {
+    .table-wrapper::-webkit-scrollbar-track {
         background-color: #f1f1f1;
-}
+    }
 
-.table-wrapper::-webkit-scrollbar-thumb {
+    .table-wrapper::-webkit-scrollbar-thumb {
         background-color: darkred;
         border-radius: 5px;
-}
+    }
