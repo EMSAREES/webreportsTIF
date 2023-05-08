@@ -65,19 +65,10 @@
           </div>
          <%--Tabla--%>
          <%--Visible="false" Para que no se muestre un dato en el Grid--%>
-         <div>
-            <asp:CheckBox ID="chkSelectAll" runat="server" Text="Seleccionar Todo" onclick="SelectAllCheckboxes(this);" />
-         </div>
-
          <div  style="overflow-x: auto;">
-            <asp:GridView ID="GVSacrificio" class="table table-condensed table-hover" AutoGenerateColumns="false" runat="server" >
+            <asp:GridView ID="GVSacrificio" class="table table-condensed table-hover" AutoGenerateColumns="false" runat="server" OnSelectedIndexChanged="GVSacrificio_SelectedIndexChanged" >
              <Columns>
        
-                <asp:TemplateField>
-                  <ItemTemplate>
-                      <asp:CheckBox ID="chbItem" runat="server" />
-                  </ItemTemplate>
-                </asp:TemplateField>
 
                 <asp:BoundField DataField="MARCA_CTE_INTR" HeaderText="MARCA_CTE_INTR" />
                 <asp:BoundField DataField="FECHA" HeaderText="FECHA" />
@@ -105,8 +96,14 @@
                 <asp:BoundField DataField="SERIE" HeaderText="SERIE" Visible="false"/>
                 <asp:BoundField DataField="ID" HeaderText="ID" Visible="false"/>--%>
             
-            </Columns>
-        </asp:GridView>
+                <%--   <asp:TemplateField>
+                       <ItemTemplate>
+                           <asp:Button ID="btimprimir2" runat="server" Text="Imprimir" />
+                       </ItemTemplate>
+                   </asp:TemplateField>--%>
+
+                </Columns>
+            </asp:GridView>
             
          </div>
       </form>
@@ -119,17 +116,6 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T  +ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 
-    <script type="text/javascript">
-    function SelectAllCheckboxes(chk) {
-        var gridView = document.getElementById('<%= GVSacrificio.ClientID %>');
-        var checkBoxes = gridView.getElementsByTagName("input");
-        for (var i = 0; i < checkBoxes.length; i++) {
-            if (checkBoxes[i].type == "checkbox") {
-                checkBoxes[i].checked = chk.checked;
-                }
-            }
-        }
-    </script>
 
 </body>
 </html>

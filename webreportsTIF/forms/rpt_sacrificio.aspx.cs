@@ -21,9 +21,9 @@ namespace webreportsTIF.forms
     public partial class rpt_sacrificio : System.Web.UI.Page
     {
 
-       public string fechaInicioStr;
-       public string fechaFinalStr;
-       public string loteStr;
+       string fechaInicioStr;
+       string fechaFinalStr;
+       string loteStr;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -92,6 +92,12 @@ namespace webreportsTIF.forms
             
             Response.Redirect("~/reportes/form_rpt_sacrificio.aspx");
         }
+
+        protected void GVSacrificio_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
 
     }    
 }

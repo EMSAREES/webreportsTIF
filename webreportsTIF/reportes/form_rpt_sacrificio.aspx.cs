@@ -26,15 +26,19 @@ namespace webreportsTIF.reportes
         
         protected void Page_Load(object sender, EventArgs e)
         {
-              rpt_sacrificio rpts = new rpt_sacrificio();
-              reportes.cr_rpt_sacrificio report = new reportes.cr_rpt_sacrificio();
+            // Obtener los datos pasados en la URL
 
-              DataSet ds = Listar();
-              report.SetDataSource(ds.Tables[0]);
+            //rpt_sacrificio rpts = new rpt_sacrificio();
 
-              CrystalReportViewer1.ReportSource = report;
+            reportes.cr_rpt_sacrificio report = new reportes.cr_rpt_sacrificio();
 
-            
+            DataSet ds = Listar();
+
+            report.SetDataSource(ds.Tables[0]);
+
+            CrystalReportViewer1.ReportSource = report;
+
+         
         }
 
         public DataSet Listar()
@@ -53,8 +57,9 @@ namespace webreportsTIF.reportes
                 adapter.Fill(ds, "tbl");
                 return ds;
 
-            }
-
+            }         
         }
+
+        
     }
 }
