@@ -61,6 +61,8 @@ namespace webreportsTIF.forms
             }
         }
 
+
+
         protected void btbuscar_Click(object sender, EventArgs e)
         {
             LlenarGV();

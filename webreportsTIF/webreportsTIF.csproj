@@ -131,6 +131,7 @@
     <Content Include="estilos\CanalesEstilos.css" />
     <Content Include="estilos\dsgridview.css" />
     <Content Include="estilos\Login.css" />
+    <Content Include="estilos\Salida_Viceras.css" />
     <Content Include="estilos\Stylemermas.css" />
     <Content Include="estilos\stylosacrificio.css" />
     <Content Include="estilos\velocidadstyle.css" />
@@ -140,6 +141,7 @@
     <Content Include="forms\rpt_canalesInventario.aspx" />
     <Content Include="forms\rpt_mermas.aspx" />
     <Content Include="forms\rpt_sacrificio.aspx" />
+    <Content Include="forms\rpt_salida_viceras.aspx" />
     <Content Include="forms\rpt_velocidad.aspx" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -243,6 +245,13 @@
     </Compile>
     <Compile Include="forms\rpt_sacrificio.aspx.designer.cs">
       <DependentUpon>rpt_sacrificio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="forms\rpt_salida_viceras.aspx.cs">
+      <DependentUpon>rpt_salida_viceras.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="forms\rpt_salida_viceras.aspx.designer.cs">
+      <DependentUpon>rpt_salida_viceras.aspx</DependentUpon>
     </Compile>
     <Compile Include="forms\rpt_velocidad.aspx.cs">
       <DependentUpon>rpt_velocidad.aspx</DependentUpon>
