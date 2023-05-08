@@ -6,10 +6,11 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"/>
+    <%--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"/>--%>
     <link href="../estilos/bootstrap.css" rel="stylesheet" />
     <link href="../estilos/bootstrap.min.css" rel="stylesheet" />
     <link href="../estilos/Stylemermas.css" rel="stylesheet" />
+
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-black">
@@ -32,54 +33,48 @@
 <%--------------------------------------------------------------------------------------------------------------------------%>
 <%-----------------------Form principal donde se ingresan los datos para la busqueda----------------------------------------%>
 
-      <form class="form">
+      <form class="form" runat="server">
           <h2>CONTROL DE MERMAS</h2>
           <div class="contenedor-inputs">
               <div class="contenedores">
                   <label for="Introductor" class="labels">Introductor</label>
-                  <input type="text" id="Introductor" name="IntroductorId" class="input-15" required="required"/>
-                  <input type="text" name="IntroductorNom" class="input-right" required="required"/>
+                  <input type="text" id="Introductor" name="IntroductorId" class="input-15" runat="server"/>
+                  <input type="text" id="IntroductorNom" name="IntroductorNom" class="input-right" runat="server"/>
               </div>
               <div class="contenedores">
-                  <label for="fechaInicio" class="labels">Fecha Inicial</label>
-                  <input type="date" id="fechaInicio" name="FechaInicio" class="input-right" required="required"/>
+                  <label for="fechaInicio" class="labels">Fecha Inicial</label>       
+                  <input type="date" id="fechaInicio" name="FechaInicio" runat="server" class="input-right"/>
                   <label for="fechaFinal" class="labels">Fecha Final</label>
-                  <input type="date" id="fechaFinal" name="FechaFinal" class="input-final" required="required"/>
+                  <input type="date" id="fechaFinal" name="FechaFinal"  runat="server" class="input-final"/>
               </div>
               <div class="contenedores">
-                  <button type="button" class="btn btn-success">Actualizar</button>
-                  <button type="button" class="btn btn-info">Buscar</button>
-                  <button type="button" class="btn btn-warning">Imprimir</button>
+                  <%--<button type="button" class="btn btn-info">Buscar</button>--%>
+                  <%--<button type="button" class="btn btn-warning">Imprimir</button>--%>
+                  
+                  <asp:Button ID="Button1" runat="server" Text="Buscar" class="btn btn-info" OnClick="Button1_Click"/>
+                  <asp:Button ID="Button2" runat="server" Text="Imprimir" class="btn btn-warning" />
+                  
               </div>
           </div>
+             <%--Tabla--%>
+         <%--Visible="false" Para que no se muestre un dato en el Grid--%>
+         <div  style="overflow-x: auto;">
+            <asp:GridView ID="GVMermas"  runat="server" AutoGenerateColumns="false" class="table table-condensed table-hover" >
+             <Columns>
+                   <asp:BoundField DataField="MARCA_CTE_INTR" HeaderText="MARCA_CTE_INTR" />
+                <asp:BoundField DataField="FECHA" HeaderText="FECHA" />
+                <asp:BoundField DataField="HORA" HeaderText="HORA" />
+                <asp:BoundField DataField="LOTE" HeaderText="LOTE" />
+                <asp:BoundField DataField="NOM_PROD" HeaderText="NOM_PROD" />
+                <asp:BoundField DataField="PIEZAS" HeaderText="PIEZAS" />
+                <asp:BoundField DataField="PESO" HeaderText="TARA"/>
+                <asp:BoundField DataField="TARA" HeaderText="TARA"/>
+            </Columns>
+        </asp:GridView>
+         </div>
       </form>
-<%--------------------------------------------------------------------------------------------------------------------------%>
-<%-----------------------Tabla de representacion de los datos que seran el resultado de la busqueda-------------------------%>
-
-          <div class="table-wrapper">
-          <table class="table table-border table-hover" cellspacing="0" width="100%">
-              <thead>
-                <th scope="col>FOLIO</th>
-                  <th scope="col">LOTE ORIGINAL</th>
-                  <th scope="col">FECHA DE SALIDA</th>
-                  <th scope="col">DIAS CUARTO</th>
-                  <th scope="col">MARCA</th>
-                  <th scope="col">PIEZAS FR</th>
-                  <th scope="col">PESO CAL</th>
-                  <th scope="col">PESO FRIO</th>
-                  <th scope="col">% MERMA</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                </tr>
-              </tbody>
-          </table>
-      </div>
-<%--------------------------------------------------------------------------------------------------------------------------%>
-<form id="form1" runat="server">
-        <div>
-        </div>
-    </form>
+     <!--Bostrap JS-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T  +ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 </body>
 </html>
