@@ -28,8 +28,6 @@ namespace webreportsTIF.forms
         protected void Page_Load(object sender, EventArgs e)
         {
             //LlenarGV();
-
-
         }
 
         public void LlenarGV()
@@ -40,9 +38,6 @@ namespace webreportsTIF.forms
             GVSacrificio.DataBind();
             //}
         }
-
-
-
 
         public DataSet Listar()
         {

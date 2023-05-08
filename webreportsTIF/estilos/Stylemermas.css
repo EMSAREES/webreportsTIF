@@ -80,7 +80,12 @@ input {
     background-color: #f1f1f1;
 }
 
-.table-wrapper::-webkit-scrollbar-thumb {
-    background-color: darkred;
-    border-radius: 5px;
+    .table-wrapper::-webkit-scrollbar-thumb {
+        background-color: darkred;
+        border-radius: 5px;
+    }
+
+.planta_tif {
+    font-size: 24px;
+    color: white;
 }
