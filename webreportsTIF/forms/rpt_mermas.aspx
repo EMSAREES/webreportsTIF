@@ -22,7 +22,7 @@
           <div class="collapse navbar-collapse" id="navbarColor01">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item" style="margin-left: 20px;">
-                <a class="nav-link active" href="#">INICIO
+                <a class="nav-link active" href="Menu.aspx">INICIO
                   <span class="visually-hidden">(current)</span>
                 </a>
               </li>

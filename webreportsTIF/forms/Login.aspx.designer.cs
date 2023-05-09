@@ -11,52 +11,43 @@ namespace webreportsTIF.forms
 {
 
 
-    public partial class rpt_velocidad
+    public partial class Login
     {
 
         /// <summary>
-        /// Control fechaInicio.
+        /// Control form2.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl fechaInicio;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form2;
 
         /// <summary>
-        /// Control fechaFinal.
+        /// Control usuario.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl fechaFinal;
+        protected global::System.Web.UI.WebControls.TextBox usuario;
 
         /// <summary>
-        /// Control btnbuscar.
+        /// Control contraseña.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnbuscar;
+        protected global::System.Web.UI.WebControls.TextBox contraseña;
 
         /// <summary>
-        /// Control btnimprimir.
+        /// Control Iniciar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnimprimir;
-
-        /// <summary>
-        /// Control GVvelocidad.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GVvelocidad;
+        protected global::System.Web.UI.WebControls.Button Iniciar;
     }
 }

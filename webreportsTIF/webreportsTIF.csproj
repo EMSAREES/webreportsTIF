@@ -131,13 +131,16 @@
     <Content Include="estilos\CanalesEstilos.css" />
     <Content Include="estilos\dsgridview.css" />
     <Content Include="estilos\Login.css" />
+    <Content Include="estilos\Menustyle.css" />
     <Content Include="estilos\Salida_Viceras.css" />
     <Content Include="estilos\Stylemermas.css" />
     <Content Include="estilos\stylosacrificio.css" />
     <Content Include="estilos\velocidadstyle.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="forms\Login.aspx" />
     <Content Include="forms\Login.html" />
+    <Content Include="forms\Menu.aspx" />
     <Content Include="forms\rpt_canalesInventario.aspx" />
     <Content Include="forms\rpt_mermas.aspx" />
     <Content Include="forms\rpt_sacrificio.aspx" />
@@ -154,6 +157,7 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="reportes\form_rpt_sacrificio.aspx" />
+    <Content Include="reportes\form_rpt_velocidad.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -225,6 +229,20 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="forms\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="forms\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Menu.aspx.cs">
+      <DependentUpon>Menu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="forms\Menu.aspx.designer.cs">
+      <DependentUpon>Menu.aspx</DependentUpon>
+    </Compile>
     <Compile Include="forms\rpt_canalesInventario.aspx.cs">
       <DependentUpon>rpt_canalesInventario.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -276,12 +294,25 @@
       <DependentUpon>cr_rpt_sacrificio.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="reportes\cr_rpt_velocidad.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cr_rpt_velocidad.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="reportes\form_rpt_sacrificio.aspx.cs">
       <DependentUpon>form_rpt_sacrificio.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="reportes\form_rpt_sacrificio.aspx.designer.cs">
       <DependentUpon>form_rpt_sacrificio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="reportes\form_rpt_velocidad.aspx.cs">
+      <DependentUpon>form_rpt_velocidad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="reportes\form_rpt_velocidad.aspx.designer.cs">
+      <DependentUpon>form_rpt_velocidad.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
@@ -331,6 +362,10 @@
     <EmbeddedResource Include="reportes\cr_rpt_sacrificio.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>cr_rpt_sacrificio.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportes\cr_rpt_velocidad.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cr_rpt_velocidad.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

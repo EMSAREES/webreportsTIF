@@ -13,6 +13,8 @@ namespace webreportsTIF.forms
 {
     public partial class rpt_velocidad : System.Web.UI.Page
     {
+        string fechaInicioStr;
+        string fechaFinalStr;
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -36,14 +38,21 @@ namespace webreportsTIF.forms
                 conn.Open();
 
                 SqlDataAdapter adapter;
-                //string fechaInicioStr;
-                //string fechaFinalStr;
-                string sql = "SELECT * FROM ENTSAL_DET D INNER JOIN ENTSAL E ON E.ID_ESC = D.ID_eSC WHERE ID_MOV IN (1,2) AND E.FECHA >= '2021-12-01 00:00' AND E.FECHA <= '2021-12-01 23:59'";
+                fechaInicioStr = fechaInicio.Value;
+                fechaFinalStr = fechaFinal.Value;
+                string sql = "SELECT * FROM ENTSAL_DET D INNER JOIN ENTSAL E ON E.ID_ESC = D.ID_eSC WHERE ID_MOV IN (1,2) AND E.FECHA >= '"+ fechaInicioStr +"' AND E.FECHA <= '"+ fechaFinalStr +"'";
+                Session["FechaISac"] = fechaInicioStr;
+                Session["FechaFSac"] = fechaFinalStr;
                 DataSet ds = new DataSet();
                 adapter = new SqlDataAdapter(sql, conn);
                 adapter.Fill(ds, "tbl");
                 return ds;
             }
+        }
+
+        protected void btnimprimir_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("/reportes/form_rpt_velocidad.aspx");
         }
     }
 }
