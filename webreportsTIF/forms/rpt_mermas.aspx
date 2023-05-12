@@ -61,14 +61,20 @@
          <div  style="overflow-x: auto;">
             <asp:GridView ID="GVMermas"  runat="server" AutoGenerateColumns="false" class="table table-condensed table-hover" >
              <Columns>
-                   <asp:BoundField DataField="MARCA_CTE_INTR" HeaderText="MARCA_CTE_INTR" />
-                <asp:BoundField DataField="FECHA" HeaderText="FECHA" />
-                <asp:BoundField DataField="HORA" HeaderText="HORA" />
                 <asp:BoundField DataField="LOTE" HeaderText="LOTE" />
-                <asp:BoundField DataField="NOM_PROD" HeaderText="NOM_PROD" />
-                <asp:BoundField DataField="PIEZAS" HeaderText="PIEZAS" />
-                <asp:BoundField DataField="PESO" HeaderText="TARA"/>
-                <asp:BoundField DataField="TARA" HeaderText="TARA"/>
+                <asp:BoundField DataField="FECHA" HeaderText="FECHA" />
+                <asp:BoundField DataField="MARCA" HeaderText="MARCA" />
+                <asp:BoundField DataField="NOMBRE" HeaderText="NOMBRE" />
+                <asp:BoundField DataField="PORCENTAJEGRASA" HeaderText="PORCENTAJEGRASA"/>
+                <asp:BoundField DataField="PORCENTAJECARNE" HeaderText="PORCENTAJECARNE"/>
+                <asp:BoundField DataField="TOTALPESOHUESO" HeaderText="TOTALPESOHUESO" />
+                <asp:BoundField DataField="TOTALPESOCARNE" HeaderText="TOTALPESOCARNE" />
+                <asp:BoundField DataField="TOTALPESOSINCARNE" HeaderText="TOTALPESOSINCARNE" />
+                <asp:BoundField DataField="OBSERVACIONES" HeaderText="OBSERVACIOBNES" />
+                <asp:BoundField DataField="TOTALGRASA" HeaderText="TOTALGRASA" />
+                <asp:BoundField DataField="TOTALCARNESGRASA" HeaderText="TOTALCARNESGRASA" />
+                <asp:BoundField DataField="TOTALGRASASCARNE" HeaderText="TOTALGRASASCARNE" />
+
             </Columns>
         </asp:GridView>
          </div>

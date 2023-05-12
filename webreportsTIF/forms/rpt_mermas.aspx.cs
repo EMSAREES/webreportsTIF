@@ -23,7 +23,6 @@ namespace webreportsTIF.forms
         {
         }
 
-
         public void LlenarGV()
         {
             GVMermas.DataSource = Listar();         
