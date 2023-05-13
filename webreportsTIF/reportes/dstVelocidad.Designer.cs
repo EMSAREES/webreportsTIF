@@ -24,7 +24,7 @@ namespace webreportsTIF.reportes {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class dstVelocidad : global::System.Data.DataSet {
         
-        private velocidadDataTable tablevelocidad;
+        private VelocidadDataTable tableVelocidad;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -54,8 +54,8 @@ namespace webreportsTIF.reportes {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["velocidad"] != null)) {
-                    base.Tables.Add(new velocidadDataTable(ds.Tables["velocidad"]));
+                if ((ds.Tables["Velocidad"] != null)) {
+                    base.Tables.Add(new VelocidadDataTable(ds.Tables["Velocidad"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace webreportsTIF.reportes {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public velocidadDataTable velocidad {
+        public VelocidadDataTable Velocidad {
             get {
-                return this.tablevelocidad;
+                return this.tableVelocidad;
             }
         }
         
@@ -152,8 +152,8 @@ namespace webreportsTIF.reportes {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["velocidad"] != null)) {
-                    base.Tables.Add(new velocidadDataTable(ds.Tables["velocidad"]));
+                if ((ds.Tables["Velocidad"] != null)) {
+                    base.Tables.Add(new VelocidadDataTable(ds.Tables["Velocidad"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace webreportsTIF.reportes {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tablevelocidad = ((velocidadDataTable)(base.Tables["velocidad"]));
+            this.tableVelocidad = ((VelocidadDataTable)(base.Tables["Velocidad"]));
             if ((initTable == true)) {
-                if ((this.tablevelocidad != null)) {
-                    this.tablevelocidad.InitVars();
+                if ((this.tableVelocidad != null)) {
+                    this.tableVelocidad.InitVars();
                 }
             }
         }
@@ -204,13 +204,13 @@ namespace webreportsTIF.reportes {
             this.Namespace = "http://tempuri.org/dstVelocidad.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tablevelocidad = new velocidadDataTable();
-            base.Tables.Add(this.tablevelocidad);
+            this.tableVelocidad = new VelocidadDataTable();
+            base.Tables.Add(this.tableVelocidad);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializevelocidad() {
+        private bool ShouldSerializeVelocidad() {
             return false;
         }
         
@@ -270,39 +270,39 @@ namespace webreportsTIF.reportes {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void velocidadRowChangeEventHandler(object sender, velocidadRowChangeEvent e);
+        public delegate void VelocidadRowChangeEventHandler(object sender, VelocidadRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class velocidadDataTable : global::System.Data.TypedTableBase<velocidadRow> {
-            
-            private global::System.Data.DataColumn columnID_ESD;
+        public partial class VelocidadDataTable : global::System.Data.TypedTableBase<VelocidadRow> {
             
             private global::System.Data.DataColumn columnID_ESC;
             
             private global::System.Data.DataColumn columnID_CTE;
             
-            private global::System.Data.DataColumn columnFECHA;
-            
-            private global::System.Data.DataColumn columnHORA;
-            
             private global::System.Data.DataColumn columnID_PROD;
-            
-            private global::System.Data.DataColumn columnPIEZAS;
-            
-            private global::System.Data.DataColumn columnPESO;
             
             private global::System.Data.DataColumn columnCONSECUTIVO_DIA;
             
             private global::System.Data.DataColumn columnCONSECUTIVO_LOTE;
             
+            private global::System.Data.DataColumn columnPIEZAS;
+            
+            private global::System.Data.DataColumn columnPESO;
+            
+            private global::System.Data.DataColumn columnFECHA_INICIAL;
+            
+            private global::System.Data.DataColumn columnFECHA_FINAL;
+            
+            private global::System.Data.DataColumn columnDIFERENCIA_HORAS;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public velocidadDataTable() {
-                this.TableName = "velocidad";
+            public VelocidadDataTable() {
+                this.TableName = "Velocidad";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -310,7 +310,7 @@ namespace webreportsTIF.reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal velocidadDataTable(global::System.Data.DataTable table) {
+            internal VelocidadDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -327,17 +327,9 @@ namespace webreportsTIF.reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected velocidadDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected VelocidadDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn ID_ESDColumn {
-                get {
-                    return this.columnID_ESD;
-                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -358,41 +350,9 @@ namespace webreportsTIF.reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn FECHAColumn {
-                get {
-                    return this.columnFECHA;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn HORAColumn {
-                get {
-                    return this.columnHORA;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn ID_PRODColumn {
                 get {
                     return this.columnID_PROD;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn PIEZASColumn {
-                get {
-                    return this.columnPIEZAS;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn PESOColumn {
-                get {
-                    return this.columnPESO;
                 }
             }
             
@@ -414,6 +374,46 @@ namespace webreportsTIF.reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn PIEZASColumn {
+                get {
+                    return this.columnPIEZAS;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn PESOColumn {
+                get {
+                    return this.columnPESO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn FECHA_INICIALColumn {
+                get {
+                    return this.columnFECHA_INICIAL;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn FECHA_FINALColumn {
+                get {
+                    return this.columnFECHA_FINAL;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn DIFERENCIA_HORASColumn {
+                get {
+                    return this.columnDIFERENCIA_HORAS;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -423,54 +423,54 @@ namespace webreportsTIF.reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public velocidadRow this[int index] {
+            public VelocidadRow this[int index] {
                 get {
-                    return ((velocidadRow)(this.Rows[index]));
+                    return ((VelocidadRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event velocidadRowChangeEventHandler velocidadRowChanging;
+            public event VelocidadRowChangeEventHandler VelocidadRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event velocidadRowChangeEventHandler velocidadRowChanged;
+            public event VelocidadRowChangeEventHandler VelocidadRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event velocidadRowChangeEventHandler velocidadRowDeleting;
+            public event VelocidadRowChangeEventHandler VelocidadRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event velocidadRowChangeEventHandler velocidadRowDeleted;
+            public event VelocidadRowChangeEventHandler VelocidadRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void AddvelocidadRow(velocidadRow row) {
+            public void AddVelocidadRow(VelocidadRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public velocidadRow AddvelocidadRow(string ID_ESD, string ID_ESC, string ID_CTE, string FECHA, string HORA, string ID_PROD, string PIEZAS, string PESO, string CONSECUTIVO_DIA, string CONSECUTIVO_LOTE) {
-                velocidadRow rowvelocidadRow = ((velocidadRow)(this.NewRow()));
+            public VelocidadRow AddVelocidadRow(string ID_ESC, string ID_CTE, string ID_PROD, string CONSECUTIVO_DIA, string CONSECUTIVO_LOTE, string PIEZAS, string PESO, string FECHA_INICIAL, string FECHA_FINAL, string DIFERENCIA_HORAS) {
+                VelocidadRow rowVelocidadRow = ((VelocidadRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        ID_ESD,
                         ID_ESC,
                         ID_CTE,
-                        FECHA,
-                        HORA,
                         ID_PROD,
+                        CONSECUTIVO_DIA,
+                        CONSECUTIVO_LOTE,
                         PIEZAS,
                         PESO,
-                        CONSECUTIVO_DIA,
-                        CONSECUTIVO_LOTE};
-                rowvelocidadRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowvelocidadRow);
-                return rowvelocidadRow;
+                        FECHA_INICIAL,
+                        FECHA_FINAL,
+                        DIFERENCIA_HORAS};
+                rowVelocidadRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowVelocidadRow);
+                return rowVelocidadRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                velocidadDataTable cln = ((velocidadDataTable)(base.Clone()));
+                VelocidadDataTable cln = ((VelocidadDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -478,73 +478,73 @@ namespace webreportsTIF.reportes {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new velocidadDataTable();
+                return new VelocidadDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnID_ESD = base.Columns["ID_ESD"];
                 this.columnID_ESC = base.Columns["ID_ESC"];
                 this.columnID_CTE = base.Columns["ID_CTE"];
-                this.columnFECHA = base.Columns["FECHA"];
-                this.columnHORA = base.Columns["HORA"];
                 this.columnID_PROD = base.Columns["ID_PROD"];
-                this.columnPIEZAS = base.Columns["PIEZAS"];
-                this.columnPESO = base.Columns["PESO"];
                 this.columnCONSECUTIVO_DIA = base.Columns["CONSECUTIVO_DIA"];
                 this.columnCONSECUTIVO_LOTE = base.Columns["CONSECUTIVO_LOTE"];
+                this.columnPIEZAS = base.Columns["PIEZAS"];
+                this.columnPESO = base.Columns["PESO"];
+                this.columnFECHA_INICIAL = base.Columns["FECHA_INICIAL"];
+                this.columnFECHA_FINAL = base.Columns["FECHA_FINAL"];
+                this.columnDIFERENCIA_HORAS = base.Columns["DIFERENCIA_HORAS"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnID_ESD = new global::System.Data.DataColumn("ID_ESD", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnID_ESD);
                 this.columnID_ESC = new global::System.Data.DataColumn("ID_ESC", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID_ESC);
                 this.columnID_CTE = new global::System.Data.DataColumn("ID_CTE", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID_CTE);
-                this.columnFECHA = new global::System.Data.DataColumn("FECHA", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnFECHA);
-                this.columnHORA = new global::System.Data.DataColumn("HORA", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnHORA);
                 this.columnID_PROD = new global::System.Data.DataColumn("ID_PROD", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID_PROD);
-                this.columnPIEZAS = new global::System.Data.DataColumn("PIEZAS", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPIEZAS);
-                this.columnPESO = new global::System.Data.DataColumn("PESO", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPESO);
                 this.columnCONSECUTIVO_DIA = new global::System.Data.DataColumn("CONSECUTIVO_DIA", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCONSECUTIVO_DIA);
                 this.columnCONSECUTIVO_LOTE = new global::System.Data.DataColumn("CONSECUTIVO_LOTE", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCONSECUTIVO_LOTE);
+                this.columnPIEZAS = new global::System.Data.DataColumn("PIEZAS", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPIEZAS);
+                this.columnPESO = new global::System.Data.DataColumn("PESO", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPESO);
+                this.columnFECHA_INICIAL = new global::System.Data.DataColumn("FECHA_INICIAL", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFECHA_INICIAL);
+                this.columnFECHA_FINAL = new global::System.Data.DataColumn("FECHA_FINAL", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFECHA_FINAL);
+                this.columnDIFERENCIA_HORAS = new global::System.Data.DataColumn("DIFERENCIA_HORAS", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDIFERENCIA_HORAS);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public velocidadRow NewvelocidadRow() {
-                return ((velocidadRow)(this.NewRow()));
+            public VelocidadRow NewVelocidadRow() {
+                return ((VelocidadRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new velocidadRow(builder);
+                return new VelocidadRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(velocidadRow);
+                return typeof(VelocidadRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.velocidadRowChanged != null)) {
-                    this.velocidadRowChanged(this, new velocidadRowChangeEvent(((velocidadRow)(e.Row)), e.Action));
+                if ((this.VelocidadRowChanged != null)) {
+                    this.VelocidadRowChanged(this, new VelocidadRowChangeEvent(((VelocidadRow)(e.Row)), e.Action));
                 }
             }
             
@@ -552,8 +552,8 @@ namespace webreportsTIF.reportes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.velocidadRowChanging != null)) {
-                    this.velocidadRowChanging(this, new velocidadRowChangeEvent(((velocidadRow)(e.Row)), e.Action));
+                if ((this.VelocidadRowChanging != null)) {
+                    this.VelocidadRowChanging(this, new VelocidadRowChangeEvent(((VelocidadRow)(e.Row)), e.Action));
                 }
             }
             
@@ -561,8 +561,8 @@ namespace webreportsTIF.reportes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.velocidadRowDeleted != null)) {
-                    this.velocidadRowDeleted(this, new velocidadRowChangeEvent(((velocidadRow)(e.Row)), e.Action));
+                if ((this.VelocidadRowDeleted != null)) {
+                    this.VelocidadRowDeleted(this, new VelocidadRowChangeEvent(((VelocidadRow)(e.Row)), e.Action));
                 }
             }
             
@@ -570,14 +570,14 @@ namespace webreportsTIF.reportes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.velocidadRowDeleting != null)) {
-                    this.velocidadRowDeleting(this, new velocidadRowChangeEvent(((velocidadRow)(e.Row)), e.Action));
+                if ((this.VelocidadRowDeleting != null)) {
+                    this.VelocidadRowDeleting(this, new VelocidadRowChangeEvent(((VelocidadRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void RemovevelocidadRow(velocidadRow row) {
+            public void RemoveVelocidadRow(VelocidadRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -604,7 +604,7 @@ namespace webreportsTIF.reportes {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "velocidadDataTable";
+                attribute2.FixedValue = "VelocidadDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -648,31 +648,15 @@ namespace webreportsTIF.reportes {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class velocidadRow : global::System.Data.DataRow {
+        public partial class VelocidadRow : global::System.Data.DataRow {
             
-            private velocidadDataTable tablevelocidad;
+            private VelocidadDataTable tableVelocidad;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal velocidadRow(global::System.Data.DataRowBuilder rb) : 
+            internal VelocidadRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tablevelocidad = ((velocidadDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string ID_ESD {
-                get {
-                    try {
-                        return ((string)(this[this.tablevelocidad.ID_ESDColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'ID_ESD\' de la tabla \'velocidad\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablevelocidad.ID_ESDColumn] = value;
-                }
+                this.tableVelocidad = ((VelocidadDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -680,14 +664,14 @@ namespace webreportsTIF.reportes {
             public string ID_ESC {
                 get {
                     try {
-                        return ((string)(this[this.tablevelocidad.ID_ESCColumn]));
+                        return ((string)(this[this.tableVelocidad.ID_ESCColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'ID_ESC\' de la tabla \'velocidad\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'ID_ESC\' de la tabla \'Velocidad\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablevelocidad.ID_ESCColumn] = value;
+                    this[this.tableVelocidad.ID_ESCColumn] = value;
                 }
             }
             
@@ -696,46 +680,14 @@ namespace webreportsTIF.reportes {
             public string ID_CTE {
                 get {
                     try {
-                        return ((string)(this[this.tablevelocidad.ID_CTEColumn]));
+                        return ((string)(this[this.tableVelocidad.ID_CTEColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'ID_CTE\' de la tabla \'velocidad\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'ID_CTE\' de la tabla \'Velocidad\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablevelocidad.ID_CTEColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string FECHA {
-                get {
-                    try {
-                        return ((string)(this[this.tablevelocidad.FECHAColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'FECHA\' de la tabla \'velocidad\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablevelocidad.FECHAColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string HORA {
-                get {
-                    try {
-                        return ((string)(this[this.tablevelocidad.HORAColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'HORA\' de la tabla \'velocidad\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablevelocidad.HORAColumn] = value;
+                    this[this.tableVelocidad.ID_CTEColumn] = value;
                 }
             }
             
@@ -744,46 +696,14 @@ namespace webreportsTIF.reportes {
             public string ID_PROD {
                 get {
                     try {
-                        return ((string)(this[this.tablevelocidad.ID_PRODColumn]));
+                        return ((string)(this[this.tableVelocidad.ID_PRODColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'ID_PROD\' de la tabla \'velocidad\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'ID_PROD\' de la tabla \'Velocidad\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablevelocidad.ID_PRODColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string PIEZAS {
-                get {
-                    try {
-                        return ((string)(this[this.tablevelocidad.PIEZASColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'PIEZAS\' de la tabla \'velocidad\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablevelocidad.PIEZASColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string PESO {
-                get {
-                    try {
-                        return ((string)(this[this.tablevelocidad.PESOColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'PESO\' de la tabla \'velocidad\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablevelocidad.PESOColumn] = value;
+                    this[this.tableVelocidad.ID_PRODColumn] = value;
                 }
             }
             
@@ -792,14 +712,14 @@ namespace webreportsTIF.reportes {
             public string CONSECUTIVO_DIA {
                 get {
                     try {
-                        return ((string)(this[this.tablevelocidad.CONSECUTIVO_DIAColumn]));
+                        return ((string)(this[this.tableVelocidad.CONSECUTIVO_DIAColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'CONSECUTIVO_DIA\' de la tabla \'velocidad\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'CONSECUTIVO_DIA\' de la tabla \'Velocidad\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablevelocidad.CONSECUTIVO_DIAColumn] = value;
+                    this[this.tableVelocidad.CONSECUTIVO_DIAColumn] = value;
                 }
             }
             
@@ -808,135 +728,215 @@ namespace webreportsTIF.reportes {
             public string CONSECUTIVO_LOTE {
                 get {
                     try {
-                        return ((string)(this[this.tablevelocidad.CONSECUTIVO_LOTEColumn]));
+                        return ((string)(this[this.tableVelocidad.CONSECUTIVO_LOTEColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'CONSECUTIVO_LOTE\' de la tabla \'velocidad\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'CONSECUTIVO_LOTE\' de la tabla \'Velocidad\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablevelocidad.CONSECUTIVO_LOTEColumn] = value;
+                    this[this.tableVelocidad.CONSECUTIVO_LOTEColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsID_ESDNull() {
-                return this.IsNull(this.tablevelocidad.ID_ESDColumn);
+            public string PIEZAS {
+                get {
+                    try {
+                        return ((string)(this[this.tableVelocidad.PIEZASColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'PIEZAS\' de la tabla \'Velocidad\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVelocidad.PIEZASColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetID_ESDNull() {
-                this[this.tablevelocidad.ID_ESDColumn] = global::System.Convert.DBNull;
+            public string PESO {
+                get {
+                    try {
+                        return ((string)(this[this.tableVelocidad.PESOColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'PESO\' de la tabla \'Velocidad\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVelocidad.PESOColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string FECHA_INICIAL {
+                get {
+                    try {
+                        return ((string)(this[this.tableVelocidad.FECHA_INICIALColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'FECHA_INICIAL\' de la tabla \'Velocidad\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVelocidad.FECHA_INICIALColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string FECHA_FINAL {
+                get {
+                    try {
+                        return ((string)(this[this.tableVelocidad.FECHA_FINALColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'FECHA_FINAL\' de la tabla \'Velocidad\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVelocidad.FECHA_FINALColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string DIFERENCIA_HORAS {
+                get {
+                    try {
+                        return ((string)(this[this.tableVelocidad.DIFERENCIA_HORASColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'DIFERENCIA_HORAS\' de la tabla \'Velocidad\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVelocidad.DIFERENCIA_HORASColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsID_ESCNull() {
-                return this.IsNull(this.tablevelocidad.ID_ESCColumn);
+                return this.IsNull(this.tableVelocidad.ID_ESCColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetID_ESCNull() {
-                this[this.tablevelocidad.ID_ESCColumn] = global::System.Convert.DBNull;
+                this[this.tableVelocidad.ID_ESCColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsID_CTENull() {
-                return this.IsNull(this.tablevelocidad.ID_CTEColumn);
+                return this.IsNull(this.tableVelocidad.ID_CTEColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetID_CTENull() {
-                this[this.tablevelocidad.ID_CTEColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsFECHANull() {
-                return this.IsNull(this.tablevelocidad.FECHAColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetFECHANull() {
-                this[this.tablevelocidad.FECHAColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsHORANull() {
-                return this.IsNull(this.tablevelocidad.HORAColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetHORANull() {
-                this[this.tablevelocidad.HORAColumn] = global::System.Convert.DBNull;
+                this[this.tableVelocidad.ID_CTEColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsID_PRODNull() {
-                return this.IsNull(this.tablevelocidad.ID_PRODColumn);
+                return this.IsNull(this.tableVelocidad.ID_PRODColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetID_PRODNull() {
-                this[this.tablevelocidad.ID_PRODColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsPIEZASNull() {
-                return this.IsNull(this.tablevelocidad.PIEZASColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetPIEZASNull() {
-                this[this.tablevelocidad.PIEZASColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsPESONull() {
-                return this.IsNull(this.tablevelocidad.PESOColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetPESONull() {
-                this[this.tablevelocidad.PESOColumn] = global::System.Convert.DBNull;
+                this[this.tableVelocidad.ID_PRODColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsCONSECUTIVO_DIANull() {
-                return this.IsNull(this.tablevelocidad.CONSECUTIVO_DIAColumn);
+                return this.IsNull(this.tableVelocidad.CONSECUTIVO_DIAColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetCONSECUTIVO_DIANull() {
-                this[this.tablevelocidad.CONSECUTIVO_DIAColumn] = global::System.Convert.DBNull;
+                this[this.tableVelocidad.CONSECUTIVO_DIAColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsCONSECUTIVO_LOTENull() {
-                return this.IsNull(this.tablevelocidad.CONSECUTIVO_LOTEColumn);
+                return this.IsNull(this.tableVelocidad.CONSECUTIVO_LOTEColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetCONSECUTIVO_LOTENull() {
-                this[this.tablevelocidad.CONSECUTIVO_LOTEColumn] = global::System.Convert.DBNull;
+                this[this.tableVelocidad.CONSECUTIVO_LOTEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsPIEZASNull() {
+                return this.IsNull(this.tableVelocidad.PIEZASColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetPIEZASNull() {
+                this[this.tableVelocidad.PIEZASColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsPESONull() {
+                return this.IsNull(this.tableVelocidad.PESOColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetPESONull() {
+                this[this.tableVelocidad.PESOColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsFECHA_INICIALNull() {
+                return this.IsNull(this.tableVelocidad.FECHA_INICIALColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetFECHA_INICIALNull() {
+                this[this.tableVelocidad.FECHA_INICIALColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsFECHA_FINALNull() {
+                return this.IsNull(this.tableVelocidad.FECHA_FINALColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetFECHA_FINALNull() {
+                this[this.tableVelocidad.FECHA_FINALColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsDIFERENCIA_HORASNull() {
+                return this.IsNull(this.tableVelocidad.DIFERENCIA_HORASColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetDIFERENCIA_HORASNull() {
+                this[this.tableVelocidad.DIFERENCIA_HORASColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -944,22 +944,22 @@ namespace webreportsTIF.reportes {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class velocidadRowChangeEvent : global::System.EventArgs {
+        public class VelocidadRowChangeEvent : global::System.EventArgs {
             
-            private velocidadRow eventRow;
+            private VelocidadRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public velocidadRowChangeEvent(velocidadRow row, global::System.Data.DataRowAction action) {
+            public VelocidadRowChangeEvent(VelocidadRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public velocidadRow Row {
+            public VelocidadRow Row {
                 get {
                     return this.eventRow;
                 }
