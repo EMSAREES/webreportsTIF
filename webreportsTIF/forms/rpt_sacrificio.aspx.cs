@@ -12,8 +12,8 @@ using CrystalDecisions.CrystalReports.Engine;
 using CrystalDecisions.Shared;
 
 
-namespace webreportsTIF.forms
-{
+namespace webreportsTIF.forms { 
+
     public partial class rpt_sacrificio : System.Web.UI.Page
     {
 

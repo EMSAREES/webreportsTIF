@@ -169,6 +169,7 @@
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="reportes\form_rpt_sacrificio.aspx" />
     <Content Include="reportes\form_rpt_velocidad.aspx" />
+    <Content Include="reportes\frm_rpt_merma.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -299,6 +300,12 @@
       <DependentUpon>CrystalReport1.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="reportes\cr_rpt_mermagh.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cr_rpt_mermagh.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="reportes\cr_rpt_sacrificio.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -329,6 +336,13 @@
     </Compile>
     <Compile Include="reportes\form_rpt_velocidad.aspx.designer.cs">
       <DependentUpon>form_rpt_velocidad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="reportes\frm_rpt_merma.aspx.cs">
+      <DependentUpon>frm_rpt_merma.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="reportes\frm_rpt_merma.aspx.designer.cs">
+      <DependentUpon>frm_rpt_merma.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
@@ -374,6 +388,10 @@
     <EmbeddedResource Include="reportes\CrystalReport1.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportes\cr_rpt_mermagh.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cr_rpt_mermagh.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="reportes\cr_rpt_sacrificio.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

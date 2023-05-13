@@ -52,7 +52,7 @@
                   <%--<button type="button" class="btn btn-warning">Imprimir</button>--%>
                   
                   <asp:Button ID="Button1" runat="server" Text="Buscar" class="btn btn-info" OnClick="Button1_Click"/>
-                  <asp:Button ID="Button2" runat="server" Text="Imprimir" class="btn btn-warning" />
+                  <asp:Button ID="Button2" runat="server" Text="Imprimir" class="btn btn-warning" OnClick="Button2_Click" />
                   
               </div>
           </div>
@@ -74,7 +74,6 @@
                 <asp:BoundField DataField="TOTALGRASA" HeaderText="TOTALGRASA" />
                 <asp:BoundField DataField="TOTALCARNESGRASA" HeaderText="TOTALCARNESGRASA" />
                 <asp:BoundField DataField="TOTALGRASASCARNE" HeaderText="TOTALGRASASCARNE" />
-
             </Columns>
         </asp:GridView>
          </div>
