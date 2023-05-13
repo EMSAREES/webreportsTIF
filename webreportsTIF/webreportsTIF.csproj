@@ -155,6 +155,17 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="reportes\dstVelocidad.xsc">
+      <DependentUpon>dstVelocidad.xsd</DependentUpon>
+    </Content>
+    <None Include="reportes\dstVelocidad.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dstVelocidad.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="reportes\dstVelocidad.xss">
+      <DependentUpon>dstVelocidad.xsd</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="reportes\form_rpt_sacrificio.aspx" />
     <Content Include="reportes\form_rpt_velocidad.aspx" />
@@ -299,6 +310,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>cr_rpt_velocidad.rpt</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reportes\dstVelocidad.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dstVelocidad.xsd</DependentUpon>
     </Compile>
     <Compile Include="reportes\form_rpt_sacrificio.aspx.cs">
       <DependentUpon>form_rpt_sacrificio.aspx</DependentUpon>

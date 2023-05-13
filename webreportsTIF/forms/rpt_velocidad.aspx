@@ -65,13 +65,9 @@
                   <asp:BoundField DataField="PESO" HeaderText="PESO" />
                   <asp:BoundField DataField="FECHA" HeaderText="FECHA" />
                   <asp:BoundField DataField="HORA" HeaderText="HORA" />
-                  <asp:BoundField DataField="SAC_SEXO" HeaderText="SAC_SEXO" />
                   <asp:BoundField DataField="CONSECUTIVO_DIA" HeaderText="CONSECUTIVO_DIA" />
                   <asp:BoundField DataField="CONSECUTIVO_LOTE" HeaderText="CONSECUTIVO_LOTE" />
                   <asp:BoundField DataField="CAJA_FECHA_ETIQ" HeaderText="PIEL_ARETE_CAMPANA" />
-                  <asp:BoundField DataField="PROCESADO" HeaderText="PROCESADO" />
-                  <asp:BoundField DataField="ID_ALM" HeaderText="ID_ALM" />
-                  <asp:BoundField DataField="FOLIO" HeaderText="FOLIO" />
               </Columns>
           </asp:GridView>
           </div>

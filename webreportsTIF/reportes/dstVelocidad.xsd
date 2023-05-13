@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dstVelocidad" targetNamespace="http://tempuri.org/dstVelocidad.xsd" xmlns:mstns="http://tempuri.org/dstVelocidad.xsd" xmlns="http://tempuri.org/dstVelocidad.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dstVelocidad" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dstVelocidad" msprop:Generator_UserDSName="dstVelocidad">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="velocidad" msprop:Generator_TableClassName="velocidadDataTable" msprop:Generator_TableVarName="tablevelocidad" msprop:Generator_RowChangedName="velocidadRowChanged" msprop:Generator_TablePropName="velocidad" msprop:Generator_RowDeletingName="velocidadRowDeleting" msprop:Generator_RowChangingName="velocidadRowChanging" msprop:Generator_RowEvHandlerName="velocidadRowChangeEventHandler" msprop:Generator_RowDeletedName="velocidadRowDeleted" msprop:Generator_RowClassName="velocidadRow" msprop:Generator_UserTableName="velocidad" msprop:Generator_RowEvArgName="velocidadRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID_ESD" msprop:Generator_ColumnVarNameInTable="columnID_ESD" msprop:Generator_ColumnPropNameInRow="ID_ESD" msprop:Generator_ColumnPropNameInTable="ID_ESDColumn" msprop:Generator_UserColumnName="ID_ESD" type="xs:string" minOccurs="0" />
+              <xs:element name="ID_ESC" msprop:Generator_ColumnVarNameInTable="columnID_ESC" msprop:Generator_ColumnPropNameInRow="ID_ESC" msprop:Generator_ColumnPropNameInTable="ID_ESCColumn" msprop:Generator_UserColumnName="ID_ESC" type="xs:string" minOccurs="0" />
+              <xs:element name="ID_CTE" msprop:Generator_ColumnVarNameInTable="columnID_CTE" msprop:Generator_ColumnPropNameInRow="ID_CTE" msprop:Generator_ColumnPropNameInTable="ID_CTEColumn" msprop:Generator_UserColumnName="ID_CTE" type="xs:string" minOccurs="0" />
+              <xs:element name="FECHA" msprop:Generator_ColumnVarNameInTable="columnFECHA" msprop:Generator_ColumnPropNameInRow="FECHA" msprop:Generator_ColumnPropNameInTable="FECHAColumn" msprop:Generator_UserColumnName="FECHA" type="xs:string" minOccurs="0" />
+              <xs:element name="HORA" msprop:Generator_ColumnVarNameInTable="columnHORA" msprop:Generator_ColumnPropNameInRow="HORA" msprop:Generator_ColumnPropNameInTable="HORAColumn" msprop:Generator_UserColumnName="HORA" type="xs:string" minOccurs="0" />
+              <xs:element name="ID_PROD" msprop:Generator_ColumnVarNameInTable="columnID_PROD" msprop:Generator_ColumnPropNameInRow="ID_PROD" msprop:Generator_ColumnPropNameInTable="ID_PRODColumn" msprop:Generator_UserColumnName="ID_PROD" type="xs:string" minOccurs="0" />
+              <xs:element name="PIEZAS" msprop:Generator_ColumnVarNameInTable="columnPIEZAS" msprop:Generator_ColumnPropNameInRow="PIEZAS" msprop:Generator_ColumnPropNameInTable="PIEZASColumn" msprop:Generator_UserColumnName="PIEZAS" type="xs:string" minOccurs="0" />
+              <xs:element name="PESO" msprop:Generator_ColumnVarNameInTable="columnPESO" msprop:Generator_ColumnPropNameInRow="PESO" msprop:Generator_ColumnPropNameInTable="PESOColumn" msprop:Generator_UserColumnName="PESO" type="xs:string" minOccurs="0" />
+              <xs:element name="CONSECUTIVO_DIA" msprop:Generator_ColumnVarNameInTable="columnCONSECUTIVO_DIA" msprop:Generator_ColumnPropNameInRow="CONSECUTIVO_DIA" msprop:Generator_ColumnPropNameInTable="CONSECUTIVO_DIAColumn" msprop:Generator_UserColumnName="CONSECUTIVO_DIA" type="xs:string" minOccurs="0" />
+              <xs:element name="CONSECUTIVO_LOTE" msprop:Generator_ColumnVarNameInTable="columnCONSECUTIVO_LOTE" msprop:Generator_ColumnPropNameInRow="CONSECUTIVO_LOTE" msprop:Generator_ColumnPropNameInTable="CONSECUTIVO_LOTEColumn" msprop:Generator_UserColumnName="CONSECUTIVO_LOTE" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

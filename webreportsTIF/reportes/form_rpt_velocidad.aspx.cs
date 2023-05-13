@@ -10,6 +10,7 @@ using System.Configuration;
 using CrystalDecisions.Shared;
 using CrystalDecisions.CrystalReports.Engine;
 using webreportsTIF.forms;
+using Microsoft.Reporting.WebForms.Internal.Soap.ReportingServices2005.Execution;
 
 namespace webreportsTIF.reportes
 {
@@ -20,6 +21,7 @@ namespace webreportsTIF.reportes
             reportes.cr_rpt_velocidad report = new reportes.cr_rpt_velocidad();
             DataSet ds = Listar();
             report.SetDataSource(ds.Tables[0]);
+
             CrystalReportViewer1.ReportSource = report;
         }
 
