@@ -49,5 +49,10 @@ namespace webreportsTIF.forms
         {
             LlenarGV();
         }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/reportes/frm_rpt_merma.aspx");
+        }
     }
 }
