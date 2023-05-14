@@ -14,7 +14,15 @@ namespace webreportsTIF.forms
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Iniciar.Style["background-color"] = "#bfc0c0";
+            Iniciar.Style["color"] = "#000";
+            Iniciar.Style["padding"] = "10px";
+            Iniciar.Style["border"] = "none";
+            Iniciar.Style["border-radius"] = "5px";
+            Iniciar.Style["font-size"] = "16px";
+            Iniciar.Style["margin-top"] = "20px";
+            Iniciar.Style["cursor"] = "pointer";
+            Iniciar.Style["transition"] = "background-color 0.3s";
         }
 
         protected void Iniciar_Click(object sender, EventArgs e)

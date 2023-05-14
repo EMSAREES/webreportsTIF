@@ -8,6 +8,19 @@
     <title></title>
     <link href="../estilos/Menustyle.css" rel="stylesheet" />
 </head>
+    <script type="text/javascript">
+    function MostrarVentanaEmergente() {
+        var resultado = confirm("¿Deseas continuar?");
+
+        if (resultado) {
+
+            window.location.href = "Login.aspx";
+
+        } else {
+
+        }
+    }
+    </script>
 <body>
     <form id="form1" runat="server">
         <div>

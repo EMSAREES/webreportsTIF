@@ -139,7 +139,6 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="forms\Login.aspx" />
-    <Content Include="forms\Login.html" />
     <Content Include="forms\Menu.aspx" />
     <Content Include="forms\rpt_canalesInventario.aspx" />
     <Content Include="forms\rpt_mermas.aspx" />

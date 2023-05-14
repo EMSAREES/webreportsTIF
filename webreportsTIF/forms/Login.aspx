@@ -26,8 +26,8 @@
                     <span>Contraseña</span>
                     <asp:TextBox ID="contraseña" runat="server" TextMode="Password"></asp:TextBox>
                 </label>
+                <asp:Button ID="Iniciar" runat="server" Text="Iniciar sesión" OnClick="Iniciar_Click"/>
             </div>
-            <asp:Button ID="Iniciar" runat="server" Text="Iniciar sesion" OnClick="Iniciar_Click" CssClass="submit-btn"/>
         </form>
     </div>
     <footer>

@@ -16,7 +16,7 @@ namespace webreportsTIF.forms
 
         protected void exitbutton_Click(object sender, EventArgs e)
         {
-            Response.Redirect("/forms/Login.aspx");
+            ClientScript.RegisterStartupScript(this.GetType(), "Popup", "MostrarVentanaEmergente();", true);
         }
     }
 }
