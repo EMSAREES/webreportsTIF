@@ -142,6 +142,7 @@
     <Content Include="estilos\Menustyle.css" />
     <Content Include="estilos\Salida_Viceras.css" />
     <Content Include="estilos\Stylemermas.css" />
+    <Content Include="estilos\stylospieles.css" />
     <Content Include="estilos\stylosacrificio.css" />
     <Content Include="estilos\velocidadstyle.css" />
     <Content Include="favicon.ico" />
@@ -150,6 +151,7 @@
     <Content Include="forms\Menu.aspx" />
     <Content Include="forms\rpt_canalesInventario.aspx" />
     <Content Include="forms\rpt_mermas.aspx" />
+    <Content Include="forms\luis_pieles.aspx" />
     <Content Include="forms\rpt_sacrificio.aspx" />
     <Content Include="forms\rpt_salida_viceras.aspx" />
     <Content Include="forms\rpt_velocidad.aspx" />
@@ -276,6 +278,13 @@
     </Compile>
     <Compile Include="forms\rpt_mermas.aspx.designer.cs">
       <DependentUpon>rpt_mermas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="forms\luis_pieles.aspx.cs">
+      <DependentUpon>luis_pieles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="forms\luis_pieles.aspx.designer.cs">
+      <DependentUpon>luis_pieles.aspx</DependentUpon>
     </Compile>
     <Compile Include="forms\rpt_sacrificio.aspx.cs">
       <DependentUpon>rpt_sacrificio.aspx</DependentUpon>
