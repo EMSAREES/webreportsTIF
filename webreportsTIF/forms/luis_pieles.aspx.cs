@@ -14,7 +14,7 @@ using CrystalDecisions.Shared;
 
 namespace webreportsTIF.forms { 
 
-    public partial class rpt_sacrificio : System.Web.UI.Page
+    public partial class luis_pieles : System.Web.UI.Page
     {
 
        string fechaInicioStr;
@@ -30,8 +30,8 @@ namespace webreportsTIF.forms {
         {
             //if (!IsPostBack)
             //{
-            GVSacrificio.DataSource = Listar();
-            GVSacrificio.DataBind();
+            GVPieles.DataSource = Listar();
+            GVPieles.DataBind();
             //}
         }
 
@@ -68,7 +68,7 @@ namespace webreportsTIF.forms {
 
        /* public void imprimir()
         {
-        https://localhost:44361/forms/rpt_sacrificio.aspx.cs
+        https://localhost:44361/forms/luis_pieles.aspx.cs
             reportes.cr_rpt_sacrificio report = new reportes.cr_rpt_sacrificio();
             DataSet ds = Listar();
             //report.SetDataSource(Listar());
@@ -81,7 +81,7 @@ namespace webreportsTIF.forms {
         protected void Button1_Click(object sender, EventArgs e)
         {
             
-            Response.Redirect("~/reportes/form_rpt_sacrificio.aspx");
+            Response.Redirect("~/reportes/form_rpt_luis_pieles.aspx");
         }
 
         protected void GVSacrificio_SelectedIndexChanged(object sender, EventArgs e)
